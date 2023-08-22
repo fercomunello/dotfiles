@@ -90,15 +90,14 @@ Some dotfiles was created based on [Sebastian Daschner's](https://github.com/sda
 
 ## Why Fedora?
 * The Fedora project is the upstream, community distro of RHEL. Red Hat is the project’s primary sponsor, but thousands of independent developers also
-contribute to the Fedora project. Each of these contributors, including Red Hat, bring their own new ideas to be tested and debated for inclusion by the larger community
-into Fedora Linux.
-* If you prefer an alternative vanilla DE other than GNOME you can download a [Fedora Spin](https://fedoraproject.org/spins).
+contribute to the Fedora project.
+* Fedora comes with [Podman](https://podman.io) engine built-in, a very good implementation of containers, no need to install Docker manually.
 * Fedora comes with a latest kernel version and well tested recent packages. 
 * Fedora is the perfect combination of bleeding edge, stability and ease of use - it's as easy to use as Ubuntu, bleeding edge as Arch while being as free and stabe (or close to) as Debian.
 * The community is fantastic, always trying to push the Linux desktop forwards, and with RedHat, it has the money to do this.
 * Technically, I feel Fedora is the most innovative and progressive force for desktop linux users.
 * As RHEL, Oracle Linux and CentOS are heavily used on enterprise, you can avoid context switching as will be more familiarized with this kind of environment.
-
+* If you prefer an alternative vanilla DE other than GNOME you can download a [Fedora Spin](https://fedoraproject.org/spins).
 
 
 <div align="center">
