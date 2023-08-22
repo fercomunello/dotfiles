@@ -45,6 +45,7 @@ alias -g G='| grep'
 # Cool tools
 alias ccq='tokei' # count code, quickly
 alias gputop='nvtop' # monitoring the GPU usage
+alias testmic='gst-launch-1.0 pulsesrc ! pulsesink'
 
 # ZSH most typed commands
 alias his="sed 's/^[^;]\+;//g' ~/.zsh_history | sort | uniq -c | sort -nr | head -n 10"
@@ -120,6 +121,7 @@ alias mci='mvn clean install'
 alias mciT='mvn clean install -DskipTests'
 
 # Docker
+alias docker='podman'
 alias dk='docker'
 alias dkp='docker ps'
 alias dkpa='docker ps -a'
