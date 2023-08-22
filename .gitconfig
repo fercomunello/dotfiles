@@ -1,0 +1,13 @@
+[user]
+	name = Fernando Comunello
+	email = 66500627+fercomunello@users.noreply.github.com
+[core]
+	editor = vim
+[init]
+	defaultBranch = main
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

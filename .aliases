@@ -1,0 +1,221 @@
+#!/bin/sh
+#
+# System info
+alias btwiuse='ffr' # bwt i use fedora :P
+# fastfetch > neofetch
+alias ff='fastfetch --disk-show-removable false'
+alias ffr='ff --logo rhel --logo-color-1 blue --color-keys blue --color-title blue'
+
+# Fedora
+alias dnfs='dnf search '
+alias sdnf='sudo dnf '
+alias dnfuc='dnf check-update'
+alias dnfu='sudo dnf update'
+alias dnfuy='sudo dnf update -y'
+alias dnfi='sudo dnf install '
+alias dnfiy='sudo dnf install -y '
+alias dnfr='sudo dnf remove '
+alias dnfin='dnf info '
+alias dnfig='dnf info | grep ' 
+alias dnfl='dnf list | grep '
+
+# Unix
+alias v='vim'
+alias vi='vim'
+alias c='cat'
+alias rr='rm -Rf'
+alias chmx='chmod +x' # give exec permission to sh files
+alias k9='kill -9' # send SIGKILL signal to the process pid
+alias rp='realpath' # show the absolute path of some file
+alias watch='watch -n .5' # watch cmd each 0.5s
+alias tf='tail -f' # follow new lines appended into file
+alias follow='tf'
+alias {zip,ZIP,war,WAR}='unzip -l'
+alias reshell='source ~/.bashrc'
+alias md='mkdir -p'
+alias wh='which'
+alias s1='sleep 1'
+alias s2='sleep 2'
+alias s01='sleep 0.1'
+alias s05='sleep 0.5'
+alias H='| head'
+alias H2='| head -n 20'
+alias G='| grep'
+
+# Cool tools
+alias ccq='tokei' # count code, quickly
+alias gputop='nvtop' # monitoring the GPU usage
+
+# ZSH most typed commands
+alias his="sed 's/^[^;]\+;//g' ~/.zsh_history | sort | uniq -c | sort -nr | head -n 10"
+
+# Open files
+alias -s {pdf,PDF}='background bgevince'
+alias -s {jpg,JPG,png,PNG}='background eog'
+alias -s {ods,ODS,odt,ODT,odp,ODP,doc,DOC,docx,DOCX,xls,XLS,xlsx,XLSX,xlsm,XLSM,ppt,PPT,pptx,PPTX,csv,CSV}='background libreoffice'
+alias -s {html,HTML}='background google-chrome'
+alias -s {mp4,MP4,mov,MOV,mkv,MKV}='background mpv'
+alias -s {zip,ZIP,war,WAR}="unzip -l"
+alias -s {jar,JAR}="java -jar"
+alias -s gz="tar -tf"
+alias -s {tgz,TGZ}="tar -tf"
+
+# Check network
+alias p1='ping -c 3 1.1.1.1' # Try to ping Cloudflare DNS three times
+alias p8='ping -c 2 8.8.8.8; ping -c 2 8.8.4.4' # Try to ping Google DNS twice
+alias p192='ping -c 3 $(hostname -I | awk "{print $1}")' # Try to ping IPV4
+alias myip='curl ifconfig.me; echo'
+
+# Systemd
+alias sctl='systemctl status'
+alias sctle='sudo systemctl enable'
+alias sctld='sudo systemctl disable'
+alias sctlr='sudo systemctl restart'
+alias sctls='sudo systemctl start'
+alias sctlt='sudo systemctl stop'
+alias sctldr='sudo systemctl daemon-reload'
+alias journal='sudo journalctl -b -n 200 -f'
+alias sctlreboot='systemctl reboot --check-inhibitors=yes'
+
+# Java
+alias j='java'
+alias jv='java -version'
+alias jc='javac'
+alias jj='java -jar'
+alias jp='javap -v -l -p -c -s'
+
+# Git
+alias gg='git graph'
+alias ggs='git show'
+alias ggt='git tag'
+alias ggu='git update'
+alias gp='git push origin $(git_current_branch)'
+alias gitpushtags='git push origin $(git_current_branch) --tags'
+alias gitpushforce='git push origin $(git_current_branch) --force'
+alias gitpushtagsforce='git push origin $(git_current_branch) --tags --force'
+alias gitpull='git pull --rebase origin $(git_current_branch)'
+alias gitppush='git pull --rebase origin $(git_current_branch) && git push origin $(git_current_branch)'
+alias ggc='git checkout -b'
+alias gitstash='git stash save'
+alias ghpr='hub pull-request'
+alias ghi='hub issue create'
+alias ghc='hub clone'
+
+# Maven
+alias mvv='mvn -v'
+alias mp='mvn package'
+alias mpT='mvn package -DskipTests'
+alias mve='mvn verify'
+alias mcv='mvn clean verify'
+alias mcve='mvn clean verify'
+alias mcp='mvn clean package'
+alias mcpT='mvn clean package -DskipTests'
+alias mqd='mvn compile quarkus:dev'
+alias mcqd='mvn compile quarkus:dev'
+alias mccqd='mvn clean compile quarkus:dev'
+alias mit='mvn test-compile failsafe:integration-test failsafe:verify'
+alias mc='mvn clean'
+alias mct='mvn clean test'
+alias mci='mvn clean install'
+alias mciT='mvn clean install -DskipTests'
+
+# Docker
+alias dk='docker'
+alias dkp='docker ps'
+alias dkpa='docker ps -a'
+alias dkpaq='docker ps -a -q'
+alias dkb='docker build -t'
+alias dkbnc='docker build --no-cache -t'
+alias dkr='docker run --rm'
+alias dkrti='docker run --rm -ti'
+alias dkrd='docker run -d'
+alias dkrp8='docker run --rm -p 8080:8080'
+alias dkrp3='docker run --rm -p 3000:3000'
+alias dks='docker start'
+alias dkt='docker stop'
+alias dktt='docker stop $(docker ps -q)'
+alias dkk='docker kill'
+alias dkkk='docker kill $(docker ps -q)'
+alias dkrm='docker rm'
+alias dkri='docker rmi'
+alias dke='docker exec -ti'
+alias dkl='docker logs -f'
+alias dki='docker images'
+alias dkpu='docker pull'
+alias dkph='docker push'
+alias dkin='docker inspect'
+alias dkn='docker network'
+alias dkc='docker-compose'
+alias dkcu='docker-compose up'
+alias dkclean='docker ps -q -a -f status=exited | xargs -r docker rm && docker images -q -f dangling=true | xargs -r docker rmi'
+
+# Kubernetes (K8S)
+alias kc='kubectl'
+alias kcg='kubectl get'
+alias kcgn='kubectl get --namespace'
+alias kcd='kubectl describe'
+alias kcdn='kubectl describe --namespace'
+alias kcdl='kubectl delete'
+alias kcdln='kubectl delete --namespace'
+alias kcdlp='kubectl-delete-pod'
+alias kcgno='kubectl get nodes'
+alias kcgp='kubectl get pods'
+alias kcgpn='kubectl get pods --namespace'
+alias kcgpp='kubectl get pods --all-namespaces'
+alias kcgd='kubectl get deployments'
+alias kcgdn='kubectl get deployments --namespace'
+alias kcgdd='kubectl get deployments --all-namespaces'
+alias kcgs='kubectl get services'
+alias kcgsn='kubectl get services --namespace'
+alias kcgss='kubectl get services --all-namespaces'
+alias kcgi='kubectl get ingresses'
+alias kcgin='kubectl get ingresses --namespace'
+alias kcgii='kubectl get ingresses --all-namespaces'
+alias kcgc='kubectl get configmaps'
+alias kcgcn='kubectl get configmaps --namespace'
+alias kcgcc='kubectl get configmaps --all-namespaces'
+alias kcgv='kubectl get virtualservices'
+alias kcgvn='kubectl get virtualservices --namespace'
+alias kcgvv='kubectl get virtualservices --all-namespaces'
+alias kcgdr='kubectl get destinationrules'
+alias kcgdrn='kubectl get destinationrules --namespace'
+alias kcgdrr='kubectl get destinationrules --all-namespaces'
+alias kcgg='kubectl get gateways'
+alias kcggn='kubectl get gateways --namespace'
+alias kcggg='kubectl get gateways --all-namespaces'
+alias kcgse='kubectl get serviceentries'
+alias kcgsen='kubectl get serviceentries --namespace'
+alias kcgsee='kubectl get serviceentries --all-namespaces'
+alias kcgr='kubectl get routerules'
+alias kcgrn='kubectl get routerules --namespace'
+alias kcgrr='kubectl get routerules --all-namespaces'
+alias kcgdp='kubectl get destinationpolicies'
+alias kcgdpn='kubectl get destinationpolicies --namespace'
+alias kcgdpp='kubectl get destinationpolicies --all-namespaces'
+alias kcge='kubectl get events --sort-by=".lastTimestamp" --all-namespaces --watch'
+alias kcc='kubectl create'
+alias kccn='kubectl create --namespace'
+alias kca='kubectl apply -f'
+alias kcan='kubectl apply -f --namespace'
+alias kce='kubectl exec -t -i'
+alias kcen='kubectl exec -t -i --namespace'
+alias kcl='kubectl logs -f'
+alias kcll='kubectl-logs'
+alias kcln='kubectl logs -f --namespace'
+alias kcgx='kubectl config get-contexts'
+alias kcux='kubectl config use-context'
+alias kcxsn='kubectl config set-context $(kubectl config current-context) --namespace'
+alias kcpf='kubectl port-forward'
+alias kcpfn='kubectl port-forward --namespace'
+alias kcpfg='kubectl-port-forward-grafana'
+alias kcpfj='kubectl-port-forward-jaeger'
+alias kcpfk='kubectl-port-forward-kiali'
+alias kcpfp='kubectl-port-forward-prometheus'
+alias kcpfpf='kubectl-port-forward-prometheus-federation'
+alias kcpfz='kubectl-port-forward-zipkin'
+alias kcdldr='kubectl-delete-default-resources'
+alias kcii='kubectl-ingress-ip-address'
+alias kcni='kubectl-nginx-ip-address'
+alias kcigip='kubectl-istio-gateway-ip-address'
+alias kcignp='kubectl-istio-gateway-http-nodeport'
+
