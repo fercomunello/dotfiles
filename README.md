@@ -81,6 +81,7 @@ ln -svf ~/.dotfiles/.aliases ~/.aliases ; \
 ln -svf ~/.dotfiles/.oh-my-zsh/custom/shortcuts.zsh ~/.oh-my-zsh/custom/shortcuts.zsh ; \
 ln -svf ~/.dotfiles/.oh-my-zsh/custom/autocomplete.zsh ~/.oh-my-zsh/custom/autocomplete.zsh ; \
 ln -svf ~/.dotfiles/.vimrc ~/.vimrc ; \
+ln -svf ~/.dotfiles/.vim/UltiSnips/all.snippets ~/.vim/UltiSnips/all.snippets ; \
 vim +PluginInstall +qall
 ```
 <br>
