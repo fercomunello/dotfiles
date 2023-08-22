@@ -220,6 +220,8 @@ sudo dnf remove -y evtest
   **Switch to previous input source:** Disabled <br>
   **Restore keyboard shortcuts:** Disabled <br>
 
+To enable focus on hover windows run `gsettings set org.gnome.desktop.wm.preferences focus-mode 'mouse'`. No need to install dconf-editor for that.
+
 ### Enhancing the workflow with extensions
 
 First, install GNOME Extensions extension on the browser and also on the system `sudo dnf install -y gnome-extensions-app`.

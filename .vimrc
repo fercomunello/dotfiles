@@ -34,7 +34,7 @@ set noswapfile
 syntax on " Syntax highlighting
 set ruler " Always shows location in file (line#)
 
-set mouse=a
+set mouse=r
 
 nmap <C-s> :w<CR>
 nmap <C-q> :q!<CR>
