@@ -14,13 +14,13 @@ The following commands are for [Fedora](https://fedoraproject.org/pt-br/workstat
 sudo dnf install -y git gh
 ```
 
-* **[Vim](https://www.vim.org):** A text editor built to make creating and changing any kind of text very efficient
+* **[Vim](https://www.vim.org):** A text editor built to make creating and changing any kind of text very efficient.
 ```sh
 sudo dnf install -y vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
-* **Alacritty():** A fast, cross-platform, OpenGL terminal emulator
+* **[Alacritty](https://alacritty.org):** A fast, cross-platform, OpenGL terminal emulator.
 ```sh
 sudo dnf -y install alacritty
 ```
@@ -84,7 +84,9 @@ ln -svf ~/.dotfiles/.vimrc ~/.vimrc ; \
 ln -svf ~/.dotfiles/.vim/UltiSnips/all.snippets ~/.vim/UltiSnips/all.snippets ; \
 vim +PluginInstall +qall
 ```
-<br>
+
+Some dotfiles was created based on [Sebastian Daschner's](https://github.com/sdaschner/dotfiles) files:
+ - as well as the effective developer approach, must watch this [presentation](https://www.youtube.com/live/mt4K6gHj5gE)! =)
 
 ## Why Fedora?
 * The Fedora project is the upstream, community distro of RHEL. Red Hat is the project’s primary sponsor, but thousands of independent developers also
@@ -96,4 +98,10 @@ into Fedora Linux.
 * The community is fantastic, always trying to push the Linux desktop forwards, and with RedHat, it has the money to do this.
 * Technically, I feel Fedora is the most innovative and progressive force for desktop linux users.
 * As RHEL, Oracle Linux and CentOS are heavily used on enterprise, you can avoid context switching as will be more familiarized with this kind of environment.
+
+
+
+<div align="center">
+  <small>By Fernando Comunello - <strong>Aug/2023</strong></small><br>
+</div>
 
