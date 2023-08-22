@@ -31,16 +31,16 @@ alias watch='watch -n .5' # watch cmd each 0.5s
 alias tf='tail -f' # follow new lines appended into file
 alias follow='tf'
 alias {zip,ZIP,war,WAR}='unzip -l'
-alias reshell='source ~/.bashrc'
+alias reshell='source ~/.zshrc'
 alias md='mkdir -p'
 alias wh='which'
-alias s1='sleep 1'
-alias s2='sleep 2'
-alias s01='sleep 0.1'
-alias s05='sleep 0.5'
-alias H='| head'
-alias H2='| head -n 20'
-alias G='| grep'
+alias -g s1='sleep 1'
+alias -g s2='sleep 2'
+alias -g s01='sleep 0.1'
+alias -g s05='sleep 0.5'
+alias -g H='| head'
+alias -g H2='| head -n 20'
+alias -g G='| grep'
 
 # Cool tools
 alias ccq='tokei' # count code, quickly
