@@ -273,6 +273,12 @@ Adds a blur look to different parts of the GNOME Shell, including the top panel,
 * [Vitals](https://extensions.gnome.org/extension/1460/vitals):
 A glimpse into your computer's temperature, voltage, fan speed, memory usage, processor load, system resources, network speed and storage stats.
 
+* [Workspace Indicator](https://extensions.gnome.org/extension/21/workspace-indicator):
+Put an indicator on the panel signaling in which workspace you are.
+
+* [Window/App switcher on active monitor](https://extensions.gnome.org/extension/5568/monitor-window-switcher-2):
+Filter windows or applications by the monitor they are open on (instead of windows or applications opened in all monitors).
+
 ### Improve font rendering
 Well, the default fonts on major distros are not so polished like macOS and not so legible as Microsoft Windows fonts. To completely resolve this issue we need to change the fonts at system level.
 
@@ -361,9 +367,15 @@ Otherwise I recommend discord-screen-audio third party app because screen and au
 
 Keep in mind that screen sharing of Discord and any app on Wayland works 100% if you open with Google Chrome or Firefox.
 
-### Other apps
+### Flatpak apps
 
+**GIMP**: `flatpak install flathub org.gimp.GIMP`
+**Telegram Desktop**: `flatpak install flathub org.telegram.desktop`
+
+### Other RPM apps
+
+**Drawio: 
 ```bash
-flatpak install flathub org.telegram.desktop
-flatpak install flathub org.gimp.GIMP
+cd /tmp && curl -L -O https://github.com/jgraph/drawio-desktop/releases/download/v21.6.8/drawio-x86_64-21.6.8.rpm && \
+ sudo rpm -i drawio-x86_64-21.6.8.rpm && cd -
 ```
