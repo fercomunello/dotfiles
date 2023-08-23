@@ -76,13 +76,14 @@ Now whenever you change some dotfile the system will recognize the changes on $H
 ```sh
 ln -svf ~/.dotfiles/.zshrc ~/.zshrc ; \
 ln -svf ~/.dotfiles/.gitconfig ~/.gitconfig ; \
-ln -svf ~/.dotfiles/.config/alacritty/* ~/.config/alacritty/* ; \
+mkdir -p ~/.config/alacritty && ln -svf ~/.dotfiles/.config/alacritty/* ~/.config/alacritty/* ; \
 ln -svf ~/.dotfiles/.aliases ~/.aliases ; \
 ln -svf ~/.dotfiles/.oh-my-zsh/custom/shortcuts.zsh ~/.oh-my-zsh/custom/shortcuts.zsh ; \
 ln -svf ~/.dotfiles/.oh-my-zsh/custom/autocomplete.zsh ~/.oh-my-zsh/custom/autocomplete.zsh ; \
 ln -svf ~/.dotfiles/.vimrc ~/.vimrc ; \
-ln -svf ~/.dotfiles/.vim/UltiSnips/all.snippets ~/.vim/UltiSnips/all.snippets ; \
-vim +PluginInstall +qall
+mkdir -p ~/.vim/UltiSnips && ln -svf ~/.dotfiles/.vim/UltiSnips/all.snippets ~/.vim/UltiSnips/all.snippets ; \
+vim +PluginInstall +qall && mkdir -p ~/.config/pipewire/pipewire-pulse.conf.d ; \
+ln -svf ~/.dotfiles/.config/pipewire/pipewire-pulse.conf.d/custom.conf ~/.config/pipewire/pipewire-pulse.conf.d/custom.conf 
 ```
 
 Some dotfiles was created based on [Sebastian Daschner's](https://github.com/sdaschner/dotfiles) files:

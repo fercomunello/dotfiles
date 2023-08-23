@@ -43,7 +43,6 @@ sudo dnf update -y && systemctl reboot -i
 ```
 
 To test codecs later, play some [1080p](https://youtu.be/yKELA1qBAKA) and [4K](https://youtu.be/euPjji8fIGg) YouTube videos to make shure.
-`
 
 ### Install Spotify
 Because we would like to listen some metal songs while setting up our Fedora \m/ <br>
