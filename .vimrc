@@ -29,6 +29,8 @@ set expandtab
 
 set encoding=utf-8
 set number relativenumber
+noremap <silent> <F2> <Cmd>setlocal number! relativenumber! <CR>
+
 set noswapfile
 
 syntax on " Syntax highlighting
