@@ -56,7 +56,7 @@ https://flathub.org/repo/flathub.flatpakrepo ; \
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
 
-Now it's easy:
+Now it's easy, install via GNOME software or run this command:
 ```bash
 flatpak install -y flathub com.spotify.Client
 ```
@@ -368,13 +368,14 @@ Otherwise I recommend discord-screen-audio third party app because screen and au
 Keep in mind that screen sharing of Discord and any app on Wayland works 100% if you open with Google Chrome or Firefox.
 
 ### Flatpak apps
+Flatpaks can also be installed from https://flathub.org/apps or via GNOME software.
 
-**GIMP**: `flatpak install flathub org.gimp.GIMP`
-**Telegram Desktop**: `flatpak install flathub org.telegram.desktop`
+[**GIMP**](https://flathub.org/apps/org.gimp.GIMP): `flatpak install flathub org.gimp.GIMP` <br>
+[**Telegram Desktop**](https://flathub.org/apps/org.telegram.desktop): `flatpak install flathub org.telegram.desktop` <br>
 
 ### Other RPM apps
 
-**Drawio: 
+**Drawio:**
 ```bash
 cd /tmp && curl -L -O https://github.com/jgraph/drawio-desktop/releases/download/v21.6.8/drawio-x86_64-21.6.8.rpm && \
  sudo rpm -i drawio-x86_64-21.6.8.rpm && cd -
