@@ -30,6 +30,7 @@ set expandtab
 set encoding=utf-8
 set number relativenumber
 noremap <silent> <F2> <Cmd>setlocal number! relativenumber! <CR>
+inoremap <silent> <F2> <Esc> <Cmd>setlocal number! relativenumber! <CR>
 
 set noswapfile
 
@@ -38,8 +39,11 @@ set ruler " Always shows location in file (line#)
 
 set mouse=r
 
-nmap <C-s> :w<CR>
-nmap <C-q> :q!<CR>
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <Esc>:w<CR>a
+
+nnoremap <C-q> :q!<CR>
+inoremap <C-q> <Esc>:q!<CR>
 
 let mapleader = " "
 nmap <leader>d <C-d>
