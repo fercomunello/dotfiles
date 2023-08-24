@@ -376,7 +376,16 @@ Flatpaks can also be installed from https://flathub.org/apps or via GNOME softwa
 ### Other RPM apps
 
 **Drawio:**
+A free online diagram software for making flowcharts, process diagrams, charts, UML, ER and network diagrams.
 ```bash
 cd /tmp && curl -L -O https://github.com/jgraph/drawio-desktop/releases/download/v21.6.8/drawio-x86_64-21.6.8.rpm && \
  sudo rpm -i drawio-x86_64-21.6.8.rpm && cd -
+```
+
+**Pencil:**
+An open-source GUI prototyping tool that's available for all platforms.
+
+```bash
+cd /tmp && curl -L -O https://pencil.evolus.vn/dl/V3.1.1.ga/Pencil-3.1.1.ga.x86_64.rpm && \
+ sudo rpm -i Pencil-3.1.1.ga.x86_64.rpm && cd -
 ```

@@ -3,5 +3,5 @@ Name=VisualVM
 Comment=All-in-One Java Troubleshooting Tool
 Type=Application
 Categories=Development;Java
-Exec=/opt/visualvm/bin/visualvm --laf Metal --fontsize 13
+Exec=/opt/visualvm/bin/visualvm --laf Metal --fontsize 15
 Icon=/opt/visualvm/icon.png
