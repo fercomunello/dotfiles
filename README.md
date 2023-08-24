@@ -83,7 +83,9 @@ ln -svf ~/.dotfiles/.oh-my-zsh/custom/autocomplete.zsh ~/.oh-my-zsh/custom/autoc
 ln -svf ~/.dotfiles/.vimrc ~/.vimrc ; \
 mkdir -p ~/.vim/UltiSnips && ln -svf ~/.dotfiles/.vim/UltiSnips/all.snippets ~/.vim/UltiSnips/all.snippets ; \
 vim +PluginInstall +qall && mkdir -p ~/.config/pipewire/pipewire-pulse.conf.d ; \
-ln -svf ~/.dotfiles/.config/pipewire/pipewire-pulse.conf.d/custom.conf ~/.config/pipewire/pipewire-pulse.conf.d/custom.conf 
+ln -svf ~/.dotfiles/.config/pipewire/pipewire-pulse.conf.d/custom.conf ~/.config/pipewire/pipewire-pulse.conf.d/custom.conf ; \
+mkdir -p ~/.local/share/applications ; \
+ln -svf ~/.dotfiles/java/applications/visualvm/visualvm.desktop ~/.local/share/applications/visualvm.desktop
 ```
 
 Some dotfiles was created based on [Sebastian Daschner's](https://github.com/sdaschner/dotfiles) files:

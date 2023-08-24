@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=VisualVM
+Comment=All-in-One Java Troubleshooting Tool
+Type=Application
+Categories=Development;Java
+Exec=/opt/visualvm/bin/visualvm --laf Metal --fontsize 13
+Icon=/opt/visualvm/icon.png
