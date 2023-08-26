@@ -26,23 +26,52 @@ EndSection
 EOF
 ```
 
-### Install media codecs
+### Enable RPMFusion repositories
+To enable access to both the free and the nonfree repository use the following command:
+```bash
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+```
+
+### Install media codecs and MPV
 Since last versions of Fedora, some media codecs are not built-in with the distro anymore so we need to install it manually:
 https://docs.fedoraproject.org/en-US/quick-docs/installing-plugins-for-playing-movies-and-music
 
 ```bash
-sudo dnf install -y gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel ; \
-sudo dnf install -y lame\* --exclude=lame-devel ; \
+sudo dnf install -y gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel && \
+sudo dnf install -y lame\* --exclude=lame-devel && \
 sudo dnf group upgrade -y --with-optional Multimedia ; \
-sudo dnf install -y libavcodec-freeworld mesa-va-drivers-freeworld ; \
-sudo dnf install -y mpv
+sudo dnf install -y mpv 
 ```
+
+### Switch to full ffmpeg and install additional codecs
+Fedora ffmpeg-free works most of the time, but one will experience version missmatch from time to time. Switch to the rpmfusion provided ffmpeg build that is better supported.
+```bash
+sudo dnf swap ffmpeg-free ffmpeg --allowerasing ; \
+sudo dnf groupupdate -y multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin && \
+sudo dnf groupupdate -y sound-and-video
+```
+
+### Enable AMD GPU hardware codecs
+**Mesa-based drivers:** These drivers contains video acceleration codecs for decoding/encoding H.264 and H.265 algorithms
+and decoding only VC1 algorithm. Add support for both hardware APIs: VA-API and VD-PAU.
+
+```bash
+sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld ; \
+sudo dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
+```
+
+### Reboot
 Then update and reboot the machine.
 ```bash
 sudo dnf update -y && systemctl reboot -i
 ```
 
 To test codecs later, play some [1080p](https://youtu.be/yKELA1qBAKA) and [4K](https://youtu.be/euPjji8fIGg) YouTube videos to make shure.
+
+To check if VA-API hardware API is working:
+```bash
+sudo dnf install libva-utils -y && vainfo && sudo dnf remove libva-utils -y
+```
 
 ### Install Spotify
 Because we would like to listen some metal songs while setting up our Fedora \m/ <br>
