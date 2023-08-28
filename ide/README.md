@@ -22,7 +22,9 @@ Exit the IDE and open via DE panel.
 
 ### Plugins
 **IdeaVim:** https://plugins.jetbrains.com/plugin/164-ideavim <br>
-**Github Theme:** https://plugins.jetbrains.com/plugin/15418-github-theme 
+**Github Theme:** https://plugins.jetbrains.com/plugin/15418-github-theme <br>
+**Naruto Progress Bar:** https://plugins.jetbrains.com/plugin/19302-naruto-progress <br>
+**Mario Progress Bar:** https://plugins.jetbrains.com/plugin/14708-mario-progress-bar
 
 ### My custom color scheme
 
@@ -30,11 +32,16 @@ Exit the IDE and open via DE panel.
 **Theme:** Github Dark High Contrast <br>
 **Color Scheme:** Dark_Liquid_theme.jar|icls <br>
 **Font:** JetBrains Mono SemiBold <br>
-**Background:** Solid Black 
+**Font size:** 22 <br>
+**Background:** Solid Black <br>
+**IDE Zoom:** 100% <br>
+**IDE Font:** SF Pro (Apple) - Size: 15
 
 #### Light
 **Theme:** Light (default) <br>
 **Color Scheme:** IntelliJ Light (default) <br>
-**Font:** JetBrains Mono Regular
-
+**Font:** JetBrains Mono SemiBold <br>
+**Font size:** 22 <br>
+**IDE Zoom:** 100% <br>
+**IDE Font:** Segoe UI (Microsoft) - Size: 13/14
 

@@ -337,6 +337,13 @@ sudo cp /run/media/fernando/0AE62F3FE62F2A81/Windows/Fonts/* /usr/local/share/fo
 sudo chmod 644 /usr/local/share/fonts/WindowsFonts/*
 ```
 
+Also, you may want to install Apple fonts.
+```bash
+cd /tmp && git clone https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts.git && \
+sudo mkdir -p /usr/local/share/fonts/AppleFonts && \
+sudo cp *.ttf *.otf /usr/local/share/fonts/AppleFonts && cd -
+```
+
 For Alacritty and IDEs, the JetBrains Mono fonts are very good, just install directly via Fedora's repositories.
 ```bash
 sudo dnf install -y jetbrains-mono-fonts-all
