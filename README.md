@@ -103,6 +103,8 @@ contribute to the Fedora project.
 * As RHEL, Oracle Linux and CentOS are heavily used on enterprise, you can avoid context switching as will be more familiarized with this kind of environment.
 * If you prefer an alternative vanilla DE other than GNOME you can download a [Fedora Spin](https://fedoraproject.org/spins).
 
+### My workstation
+<img src="https://i.imgur.com/2WwFx7x.png">
 
 <div align="center">
   <small>By Fernando Comunello - <strong>Aug/2023</strong></small><br>
