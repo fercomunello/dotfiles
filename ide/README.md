@@ -29,10 +29,11 @@ Exit the IDE and open via DE panel.
 ### My custom color scheme
 
 #### Dark
-**Theme:** Github Dark High Contrast <br>
-**Color Scheme:** Dark_Liquid_theme.jar|icls <br>
-**Font:** JetBrains Mono SemiBold <br>
-**Font size:** 22 <br>
+**Theme:** Dark <br>
+**Color Scheme:** Dark_Liquid.jar|icls <br>
+**Font:** JetBrains Mono NL SemiBold <br>
+**Font size:** 19 <br>
+**Line height:** 1.3 <br>
 **Background:** Solid Black <br>
 **IDE Zoom:** 100% <br>
 **IDE Font:** SF Pro (Apple) - Size: 15
@@ -40,8 +41,9 @@ Exit the IDE and open via DE panel.
 #### Light
 **Theme:** Light (default) <br>
 **Color Scheme:** IntelliJ Light (default) <br>
-**Font:** JetBrains Mono SemiBold <br>
-**Font size:** 22 <br>
+**Font:** JetBrains Mono NL Regular <br>
+**Font size:** 19 <br>
+**Line height:** 1.3 <br>
 **IDE Zoom:** 100% <br>
 **IDE Font:** Segoe UI (Microsoft) - Size: 13/14
 
