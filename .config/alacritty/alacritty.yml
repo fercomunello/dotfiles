@@ -29,7 +29,7 @@ window:
   decorations: None
   startup_mode: Windowed
   gtk_theme_variant: None
-  opacity: .88
+  opacity: .9
   padding:
     x: 10
     y: 1

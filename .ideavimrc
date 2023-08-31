@@ -1,9 +1,11 @@
 set number relativenumber
 
-set idearefactormode=keep
 set ideajoin
-set surround
-set easymotion
+set ignorecase
+set incsearch
+
+set idearefactormode=keep
+set ideastatusicon=disabled
 
 let mapleader = " "
 
@@ -11,7 +13,6 @@ nnoremap <C-j> :m +1<CR>
 nnoremap <C-k> :m -2<CR>
 inoremap <C-j> <Esc>:m +1<CR>gi
 inoremap <C-k> <Esc>:m -2<CR>gi
-
 
 " system clipboard
 vmap <leader>y "+y
@@ -35,10 +36,11 @@ nmap <leader>q <action>(CloseEditor)
 nmap <leader>i <action>(Generate)
 nmap <leader>m <action>(Git.Menu)
 nmap <leader>s <action>(QuickChangeScheme)
-nmap <leader>r <action>(ShowErrorDescription)
 nmap <leader>e <action>(GotoNextError)
 nnoremap <leader><leader> <C-Tab>
 
 set NERDTree
 let g:NERDTreeMapActivateNode='l'
 let g:NERDTreeMapJumpParent='h'
+
+nnoremap <leader>f :NERDTreeFocus<CR>
