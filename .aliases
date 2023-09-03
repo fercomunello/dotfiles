@@ -50,6 +50,9 @@ alias testmic='gst-launch-1.0 pulsesrc ! pulsesink'
 # ZSH most typed commands
 alias his="sed 's/^[^;]\+;//g' ~/.zsh_history | sort | uniq -c | sort -nr | head -n 10"
 
+# Clear terminal history
+alias chis="history -c"
+
 # Open files
 alias -s {pdf,PDF}='background bgevince'
 alias -s {jpg,JPG,png,PNG}='background eog'
