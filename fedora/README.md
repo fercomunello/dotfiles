@@ -164,7 +164,10 @@ sudo dnf remove -y evtest
  **Show all apps**: Mod+A <br>
  **Show notifications**: Disabled <br>
  **Focus the active notification**: Mod+N <br>
- **Show the overview:** Mod+S <br>
+ **Show the overview:** Mod+Space <br>
+ **Show all apps:** Mod+A <br>
+ **Restore the keyboard shortcuts:** Disabled <br>
+ **Show the notification list:** Mod+V <br>
 
 **Navigation:**
   **Move to workspace on the left:** Mod +H <br>
@@ -183,10 +186,6 @@ sudo dnf remove -y evtest
   **Switch system controls directly:** Disabled <br>
   **Switch applications:** Alt+Tab <br>
   **Switch to last workspace:** Mod+0 (keypad) <br>
-  **Switch to workspace 1**: Mod+1 <br>
-  **Switch to workspace 2**: Mod+2 <br>
-  **Switch to workspace 3**: Mod+3 <br>
-  **Switch to workspace 4**: Mod+4 <br>
   **Switch windows:** Mod+Tab <br>
 
   * **Note:** It's also possible to move between workspaces by holding 
@@ -248,7 +247,15 @@ sudo dnf remove -y evtest
   **Switch to previous input source:** Disabled <br>
   **Restore keyboard shortcuts:** Disabled <br>
 
-To enable focus on hover windows run `gsettings set org.gnome.desktop.wm.preferences focus-mode 'mouse'`. No need to install dconf-editor for that.
+### Configure Dconf-editor
+A graphical tool for editing the dconf database.
+
+```bash
+sudo dnf install -y dconf-editor
+```
+
+**Disable Mod key when pressed alone:** `org > gnome > mutter -> overlay-key`, because Mod+Space is been used to open GNOME overview instead,
+that way we avoid accidentally opening the overview. <br>
 
 ### Enhancing the workflow with extensions
 
@@ -260,18 +267,23 @@ Switch between windows on Alt|Mod+Tab using Vim keys: H,J,K,L.
 * [Focus Follows Workspace](https://extensions.gnome.org/extension/4688/focus-follows-workspace):
 Focus the primary monitor after switching workspaces via keyboard
 
+* [Space Bar](https://extensions.gnome.org/extension/5090/space-bar):
+Replaces the activities button with an i3-like workspaces bar.
+
+Shortcuts:
+- **Alt+Esc (capslock):** Switch to previous workspace<br>
+- **Mod+1..n:** Switch to workspace n<br>
+- **CTRL+Alt+Mod+H:** Move current workspace left<br>
+- **CTRL+Alt+Mod+L:** Move current workspace right<br>
+
 * [Focus Changer](https://extensions.gnome.org/extension/4627/focus-changer):
 Change focus between windows in all directions.
 
-Focus Changer shortcuts:
+Shortcuts:
 - **Focus up:** Mod+Alt+K <br>
 - **Focus down:** Mod+Alt+J <br>
 - **Focus left:** Mod+Alt+H <br>
 - **Focus right:** Mod+Alt+L <br>
-
-* [Mouse Follow Focus](https://extensions.gnome.org/extension/4642/mouse-follows-focus):
-Are you annoyed that you have to manually move your mouse between screens because it can't keep up with your keyboard shortcuts?
-Then this extension is for you!
 
 * [Awesome Tiles](https://extensions.gnome.org/extension/4702/awesome-tiles):
 Tile windows using keyboard shortcuts.
@@ -301,9 +313,6 @@ Adds a blur look to different parts of the GNOME Shell, including the top panel,
 
 * [Vitals](https://extensions.gnome.org/extension/1460/vitals):
 A glimpse into your computer's temperature, voltage, fan speed, memory usage, processor load, system resources, network speed and storage stats.
-
-* [Workspace Indicator](https://extensions.gnome.org/extension/21/workspace-indicator):
-Put an indicator on the panel signaling in which workspace you are.
 
 * [Window/App switcher on active monitor](https://extensions.gnome.org/extension/5568/monitor-window-switcher-2):
 Filter windows or applications by the monitor they are open on (instead of windows or applications opened in all monitors).
