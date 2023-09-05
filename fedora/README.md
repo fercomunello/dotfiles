@@ -424,6 +424,23 @@ sudo vim /etc/selinux/config
 # SELINUX=disabled
 ```
 
+To emulate Docker CLI with Podman:
+https://podman-desktop.io/docs/migrating-from-docker/emulating-docker-cli-with-podman
+
+```
+sudo vim /usr/local/bin/docker
+
+#!/usr/bin/sh
+[ -e /etc/containers/nodocker ] || \
+echo "Emulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg." >&2
+exec podman "$@"
+```
+
+```bash
+sudo touch /etc/containers/nodocker && sudo chmod +x /usr/local/bin/docker && \
+docker run -it docker.io/hello-world
+```
+
 ### Flatpak apps
 Flatpaks can also be installed from https://flathub.org/apps or via GNOME software.
 
