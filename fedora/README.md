@@ -412,6 +412,18 @@ Otherwise I recommend discord-screen-audio third party app because screen and au
 
 Keep in mind that screen sharing of Discord and any app on Wayland works 100% if you open with Google Chrome or Firefox.
 
+### Podman
+
+[Podman](https://podman.io) is built-in in Fedora, so it's not required to install Docker as Podman is a good replacement for the container implementation. However we need to install podman-compose and change SELinux mode to permissive or disabled to avoid permission issues when dealing with container scripts later. Keep in mind that is not a good practice disabling SELinux in any sense, specially for productions systems but for general day-to-day development, it's safe for now.
+```bash
+sudo dnf install -y podman-compose \
+sudo setenforce 0 \
+sestatus
+
+sudo vim /etc/selinux/config
+# SELINUX=disabled
+```
+
 ### Flatpak apps
 Flatpaks can also be installed from https://flathub.org/apps or via GNOME software.
 
