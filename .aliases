@@ -64,6 +64,9 @@ alias -s {jar,JAR}="java -jar"
 alias -s gz="tar -tf"
 alias -s {tgz,TGZ}="tar -tf"
 
+# Open the terminal on the same directory in other window / unix process
+alias .='alacritty --working-directory=$(pwd) & disown'
+
 # Check network
 alias p1='ping -c 3 1.1.1.1' # Try to ping Cloudflare DNS three times
 alias p8='ping -c 2 8.8.8.8; ping -c 2 8.8.4.4' # Try to ping Google DNS twice
