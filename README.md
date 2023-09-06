@@ -70,6 +70,12 @@ Open a new terminal after running this command.
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
+### Add ZSH plugins
+```sh
+git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search && \
+source ~/.zshrc && source ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+```
+
 ### Clone the repository
 ```sh
 git clone https://github.com/fercomunello/dotfiles.git ~/.dotfiles

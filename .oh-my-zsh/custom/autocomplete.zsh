@@ -54,11 +54,9 @@ background() {
 bindkey " " expand-alias-space
 bindkey -M isearch " " magic-space
 
-
-# file completion patterns
-zstyle ':completion:*:*:vim:*' file-patterns '^*.(pdf|odt|ods|doc|docx|xls|xlsx|odp|ppt|pptx|mp4|mkv|aux):source-files' '*:all-files'
-zstyle ':completion:*:*:(build-workshop|build-document):*' file-patterns '*.adoc'
-
+# binds for zsh-history-substring-search plugin
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
 
 sourceIfExists() {
   if [ -e $1 ]; then
