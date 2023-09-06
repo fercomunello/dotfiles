@@ -92,6 +92,7 @@ alias jj='java -jar'
 alias jp='javap -v -l -p -c -s'
 
 # Git
+alias gcm='git commit -m ""'
 alias gg='git graph'
 alias ggs='git show'
 alias ggt='git tag'

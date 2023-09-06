@@ -28,6 +28,7 @@ Exit the IDE and open via DE panel.
 **1º Font:** JetBrains Mono NL Medium <br>
 **2º Font:** Consolas Regular <br>
 **Font size:** 19 <br>
+**Font size (presentation):** 24 <br>
 **Line height:** 1.3 <br>
 **Background:** Solid Black - 50% opacity <br>
 **IDE Zoom:** 100% <br>
