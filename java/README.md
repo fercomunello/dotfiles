@@ -64,7 +64,7 @@ gradle -v
 All-in-One Java Troubleshooting Tool
 
 ```bash
-cd /tmp && curl -L -O https://github.com/oracle/visualvm/releases/download/2.1.6/visualvm_216.zip && \
+cd /tmp && curl -L -O https://github.com/oracle/visualvm/releases/download/2.1.7/visualvm_217.zip && \
 unzip visualvm_*.zip && sudo rm -rf /opt/visualvm && sudo mkdir -p /opt/visualvm && \
 sudo mv -v visualvm_*/* /opt/visualvm && \
 sudo cp ~/.dotfiles/java/applications/visualvm/icon.png /opt/visualvm && \

@@ -84,6 +84,7 @@ git clone https://github.com/fercomunello/dotfiles.git ~/.dotfiles
 ### Create the symbolic links
 Now whenever you change some dotfile the system will recognize the changes on $HOME folder and subfolders.
 ```sh
+ln -svf ~/.dotfiles/.profile ~/.profile ; \
 ln -svf ~/.dotfiles/.zshrc ~/.zshrc ; \
 ln -svf ~/.dotfiles/.gitconfig ~/.gitconfig ; \
 mkdir -p ~/.config/alacritty && ln -svf ~/.dotfiles/.config/alacritty/* ~/.config/alacritty/* ; \
