@@ -39,6 +39,8 @@ cursor:
     shape: Block
     blinking: On
     blink-interval: 250
+  vi_mode_style:
+    shape: Block
 
 colors:
   primary:
@@ -49,7 +51,7 @@ colors:
     cursor: '#ffffff'
   vi_mode_cursor:
     text: '#000000'
-    cursor: '#f39d21'
+    cursor: '#5df55d'
 
   normal:
     black: '#000000'

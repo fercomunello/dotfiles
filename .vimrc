@@ -14,9 +14,6 @@ Plugin 'SirVer/ultisnips'
 " Snippets are separated from the engine. 
 Plugin 'ervandew/supertab'
 
-" Vim Tmux Navigator
-Plugin 'christoomey/vim-tmux-navigator'
-
 let g:SuperTabDefaultCompletionType    = '<C-n>'
 let g:SuperTabCrMapping                = 0
 let g:UltiSnipsExpandTrigger           = '<tab>'
@@ -61,3 +58,17 @@ inoremap <C-j> <Esc>:m +1<CR>gi
 inoremap <C-k> <Esc>:m -2<CR>gi
 vnoremap <C-j> :m '>+1<CR>gvgv
 vnoremap <C-k> :m '<-2<CR>gvgv
+
+
+set background=dark
+
+if exists('$TMUX')
+if !has('gui_running') && &term =~ '^\%(screen\|tmux\)'
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+
+colorscheme torte
+set termguicolors
+endif
+
