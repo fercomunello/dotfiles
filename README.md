@@ -91,10 +91,10 @@ mkdir -p ~/.config/alacritty && ln -svf ~/.dotfiles/.config/alacritty/* ~/.confi
 ln -svf ~/.dotfiles/.aliases ~/.aliases ; \
 ln -svf ~/.dotfiles/.oh-my-zsh/custom/shortcuts.zsh ~/.oh-my-zsh/custom/shortcuts.zsh ; \
 ln -svf ~/.dotfiles/.oh-my-zsh/custom/autocomplete.zsh ~/.oh-my-zsh/custom/autocomplete.zsh ; \
+ln -svf ~/.dotfiles/.tmux.conf ~/.tmux.conf ; \
 ln -svf ~/.dotfiles/.vimrc ~/.vimrc ; \
 mkdir -p ~/.vim/UltiSnips && ln -svf ~/.dotfiles/.vim/UltiSnips/all.snippets ~/.vim/UltiSnips/all.snippets ; \
 vim +PluginInstall +qall && mkdir -p ~/.config/pipewire/pipewire-pulse.conf.d ; \
-ln -svf ~/.dotfiles/.config/pipewire/pipewire-pulse.conf.d/custom.conf ~/.config/pipewire/pipewire-pulse.conf.d/custom.conf ; \
 mkdir -p ~/.local/share/applications ; \
 ln -svf ~/.dotfiles/java/applications/visualvm/visualvm.desktop ~/.local/share/applications/visualvm.desktop ; \
 ln -svf ~/.dotfiles/.ideavimrc ~/.ideavimrc

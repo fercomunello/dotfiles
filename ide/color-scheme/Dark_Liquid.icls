@@ -1,11 +1,15 @@
 <scheme name="Dark Liquid" version="142" parent_scheme="Darcula">
+  <option name="FONT_SCALE" value="1.0" />
   <metaInfo>
-    <property name="created">2023-10-17T21:21:11</property>
+    <property name="created">2024-01-03T16:04:04</property>
     <property name="ide">idea</property>
-    <property name="ideVersion">2023.2.2.0.0</property>
-    <property name="modified">2023-10-17T21:21:13</property>
+    <property name="ideVersion">2023.2.5.0.0</property>
+    <property name="modified">2024-01-03T16:04:17</property>
     <property name="originalScheme">Dark Liquid</property>
   </metaInfo>
+  <option name="CONSOLE_FONT_NAME" value="Consolas" />
+  <option name="CONSOLE_FONT_SIZE" value="22" />
+  <option name="CONSOLE_LINE_SPACING" value="1.3" />
   <colors>
     <option name="CARET_COLOR" value="c1c7cd" />
     <option name="CARET_ROW_COLOR" value="262626" />
@@ -144,7 +148,7 @@
     </option>
     <option name="DEFAULT_KEYWORD">
       <value>
-        <option name="FOREGROUND" value="78a9ff" />
+        <option name="FOREGROUND" value="639eff" />
       </value>
     </option>
     <option name="DEFAULT_LINE_COMMENT">

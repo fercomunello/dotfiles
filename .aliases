@@ -90,6 +90,7 @@ alias jv='java -version'
 alias jc='javac'
 alias jj='java -jar'
 alias jp='javap -v -l -p -c -s'
+alias sdki='sdk env install'
 
 # Git
 alias gcm='git commit -m ""'

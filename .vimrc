@@ -14,6 +14,9 @@ Plugin 'SirVer/ultisnips'
 " Snippets are separated from the engine. 
 Plugin 'ervandew/supertab'
 
+" Vim Tmux Navigator
+Plugin 'christoomey/vim-tmux-navigator'
+
 let g:SuperTabDefaultCompletionType    = '<C-n>'
 let g:SuperTabCrMapping                = 0
 let g:UltiSnipsExpandTrigger           = '<tab>'
