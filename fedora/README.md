@@ -73,6 +73,14 @@ To check if VA-API hardware API is working:
 sudo dnf install libva-utils -y && vainfo && sudo dnf remove libva-utils -y
 ```
 
+### Install AMD ROCm OpenCL
+Theses additional packages are required for Davinci Resolve and other GPU accelerated softwares.
+
+For more information, see: https://fedoraproject.org/wiki/SIGs
+```bash
+sudo usermod -a -G video $LOGNAME && sudo dnf install rocm-opencl
+```
+
 ### Install Spotify
 Because we would like to listen some metal songs while setting up our Fedora \m/ <br>
 https://docs.fedoraproject.org/en-US/quick-docs/installing-spotify
@@ -446,6 +454,13 @@ Flatpaks can also be installed from https://flathub.org/apps or via GNOME softwa
 
 [**GIMP**](https://flathub.org/apps/org.gimp.GIMP): `flatpak install flathub org.gimp.GIMP` <br>
 [**Telegram Desktop**](https://flathub.org/apps/org.telegram.desktop): `flatpak install flathub org.telegram.desktop` <br>
+
+### Davinci Resolve
+
+Download the executable installer from the Davinci Resolve [website](https://www.blackmagicdesign.com/br/products/davinciresolve).
+After the installation, we need to be aware of some limitations of Davinci software on Linux. Here's some useful information:
+- [Arch Wiki](https://wiki.archlinux.org/title/DaVinci_Resolve)
+- [Painless Linux Video Worflow](https://passthroughpo.st/painless-linux-video-production-part-3-organization-and-workflow/)
 
 ### Other RPM apps
 
