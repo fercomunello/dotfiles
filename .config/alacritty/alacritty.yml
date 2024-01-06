@@ -18,7 +18,7 @@ font:
     family: JetBrains Mono
     style: Bold Italic
 
-  size: 19
+  size: 18
   offset:
     x: -2 
     y: -1 
@@ -29,10 +29,13 @@ window:
   decorations: None
   startup_mode: Windowed
   gtk_theme_variant: None
-  opacity: 1
+  opacity: .90
   padding:
-    x: 8
+    x: 12
     y: 1
+  dimensions:
+    columns: 125
+    lines: 29
 
 cursor:
   style:

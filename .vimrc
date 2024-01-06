@@ -61,6 +61,7 @@ vnoremap <C-k> :m '<-2<CR>gvgv
 
 
 set background=dark
+colorscheme hemisu
 
 if exists('$TMUX')
 if !has('gui_running') && &term =~ '^\%(screen\|tmux\)'
@@ -68,7 +69,6 @@ if !has('gui_running') && &term =~ '^\%(screen\|tmux\)'
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 
-colorscheme torte
 set termguicolors
 endif
 

@@ -72,6 +72,7 @@ alias p1='ping -c 3 1.1.1.1' # Try to ping Cloudflare DNS three times
 alias p8='ping -c 2 8.8.8.8; ping -c 2 8.8.4.4' # Try to ping Google DNS twice
 alias p192='ping -c 3 $(hostname -I | awk "{print $1}")' # Try to ping IPV4
 alias myip='curl ifconfig.me; echo'
+alias fdns='sudo resolvectl flush-caches'
 
 # Systemd
 alias sctl='systemctl status'

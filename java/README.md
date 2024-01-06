@@ -67,7 +67,7 @@ All-in-One Java Troubleshooting Tool
 cd /tmp && curl -L -O https://github.com/oracle/visualvm/releases/download/2.1.7/visualvm_217.zip && \
 unzip visualvm_*.zip && sudo rm -rf /opt/visualvm && sudo mkdir -p /opt/visualvm && \
 sudo mv -v visualvm_*/* /opt/visualvm && \
-sudo cp ~/.dotfiles/java/applications/visualvm/icon.png /opt/visualvm && \
+sudo cp ~/.dotfiles/java/applications/visualvm/icon.svg /opt/visualvm && \
 update-desktop-database ~/.local/share/applications && cd - > /dev/null
 ```
 
