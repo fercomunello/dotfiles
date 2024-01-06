@@ -3,8 +3,9 @@
 * The dotfiles are mapped via [symlinks](https://en.wikipedia.org/wiki/Symbolic_link).
 
 ### My workstation
+<img src="https://i.imgur.com/piqFVSV.png">
+<img src="https://i.imgur.com/CFusKI2.png">
 <img src="https://i.imgur.com/PgaTfyf.png">
-<img src="https://i.imgur.com/qczU8xy.png"> 
 
 ## Setup
 First of all, install some Linux distro and install the required packages.
