@@ -223,19 +223,25 @@ sudo dnf remove -y evtest
 
 **Custom Shortcuts:**
 **Launch Alacritty Terminal:** Mod+Return/enter <br>
-  -> env -u WAYLAND_DISPLAY alacritty <br>
-**Launch Text Editor:** Mod+T <br>
+  -> env -u WAYLAND_DISPLAY alacritty <br>  
+**Open Vim:** Mod+T <br>
+  -> env -u WAYLAND_DISPLAY alacritty --command vim <br>
+**Launch Text Editor:** Mod+F8 <br>
   -> gnome-text-editor --new-window --ignore-session <br>
-**Launch Spotiy:** Mod+T <br>
+**Launch Spotiy:** Mod+F5 <br>
   -> flatpak run com.spotify.Client <br>
+**Launch Firefox:** Mod+F6 <br>
+  -> firefox <br>
+**Launch Dialect (for text translation):** Mod+D <br>
+  -> dialect <br>
 	
 **Sound and Media:**
 
-  **Volume up:** Mod+Alt+= <br>
-  **Volume down:** Mod+Alt+- <br>
+  **Volume up:** Mod+Alt + = <br>
+  **Volume down:** Mod+Alt + - <br>
   **Play/pause:** Mod+Alt+P <br>
   **Volume mute/unmute:** Mod+Alt+9 <br>
-  **Microphone mute/unmute:** Alt+Super+0 <br>
+  **Microphone mute/unmute:** Mod+Alt+0 <br>
 
 **Screenshots:**
   **Take a screenshot interactively:** Print <br>
@@ -269,14 +275,14 @@ that way we avoid accidentally opening the overview. <br>
 
 First, install GNOME Extensions extension on the browser and also on the system `sudo dnf install -y gnome-extensions-app`.
 
-* [Vim Alt Tab](https://github.com/koko-ng/vim-altTab):
-Switch between windows on Alt|Mod+Tab using Vim keys: H,J,K,L.
+* [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/):
+Tweak Tool to customize GNOME Shell.
 
-* [Focus Follows Workspace](https://extensions.gnome.org/extension/4688/focus-follows-workspace):
-Focus the primary monitor after switching workspaces via keyboard
-
-* [Space Bar](https://extensions.gnome.org/extension/5090/space-bar):
-Replaces the activities button with an i3-like workspaces bar.
+Visibility options that I disabled:
+- Window Picker Caption (the text under window preview in overview).
+- Workspace Popup (popup that appears on the screen when you switch to other workspace).
+- Dash and Dash separator (the pinned apps in the overview).
+- Activities button (actually replaced with Logo Menu extension).
 
 Shortcuts:
 - **Alt+Esc (capslock):** Switch to previous workspace<br>
@@ -284,8 +290,40 @@ Shortcuts:
 - **CTRL+Alt+Mod+H:** Move current workspace left<br>
 - **CTRL+Alt+Mod+L:** Move current workspace right<br>
 
+
+* [Vim Alt Tab](https://github.com/koko-ng/vim-altTab):
+Switch between windows on Alt|Mod+Tab using Vim keys: H,J,K,L.
+
+* [Focus Follows Workspace](https://extensions.gnome.org/extension/4688/focus-follows-workspace):
+Focus the primary monitor after switching workspaces via keyboard
+
+* [Space Bar](https://extensions.gnome.org/extension/5090/space-bar):
+Replaces the activities button with an i3-like workspaces bar (not needed for GNOME 45+ anymore).
+
+* [Hide Top Bar](https://extensions.gnome.org/extension/545/hide-top-bar):
+Hides the top bar, except in overview (not available for GNOME 45+ yet).
+
+* [No Titlebar When Maximized](https://extensions.gnome.org/extension/4630/no-titlebar-when-maximized):
+Hides the classic title bar of maximized x.org windows (not needed for GNOME 45+).
+
+* [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/):
+Tweak Tool to customize GNOME Shell.
+
+* [Blur My Shell](https://extensions.gnome.org/extension/3193/blur-my-shell/):
+Adds a blur look to different parts of the GNOME Shell.
+
+* [Logo Menu](https://extensions.gnome.org/extension/4451/logo-menu/):
+Replace the Activies with a menu logo.
+
+* [Spotify Tray](https://extensions.gnome.org/extension/4472/spotify-tray/):
+Adds a button to the panel that shows info and spotify playback.
+
+* [Window/app switcher on active monitor](https://extensions.gnome.org/extension/5568/monitor-window-switcher-2):
+GNOME Shell extension that puts the window switcher accordingly to the active monitor/workspace (not available for GNOME 45+ yet).
+
 * [Focus Changer](https://extensions.gnome.org/extension/4627/focus-changer):
 Change focus between windows in all directions.
+
 
 Shortcuts:
 - **Focus up:** Mod+Alt+K <br>
@@ -312,18 +350,7 @@ Awesome Tiles shortcuts:
 - **Tile Window to Bottom Left:** Mod+, <br>
 - **Tile Window to Bottom Right:** Mod+; <br>
 
-### Tweaking GNOME
-More extensions:
-* [Colored Application Menu Icon](https://github.com/PRATAP-KUMAR/app-menu-icon): Remove Symbolic Icons and Saturation Effect for App Menu Icon. Like old GNOME versions.
 
-* [Blur My Shell](https://extensions.gnome.org/extension/3193/blur-my-shell/):
-Adds a blur look to different parts of the GNOME Shell, including the top panel, dash and overview.
-
-* [Vitals](https://extensions.gnome.org/extension/1460/vitals):
-A glimpse into your computer's temperature, voltage, fan speed, memory usage, processor load, system resources, network speed and storage stats.
-
-* [Window/App switcher on active monitor](https://extensions.gnome.org/extension/5568/monitor-window-switcher-2):
-Filter windows or applications by the monitor they are open on (instead of windows or applications opened in all monitors).
 
 ### Improve font rendering
 Well, the default fonts on major distros are not so polished like macOS and not so legible as Microsoft Windows fonts. To completely resolve this issue we need to change the fonts at system level.
@@ -390,6 +417,11 @@ sudo dnf install -y htop btop fastfetch nvtop
 * fastfetch: a alternative to neofetch but faster as it's written in C.
 * nvtop: displays GPU processes and VRAM usage.
 
+For example, to see the birth of the filesystem, like when Linux was installed, run:
+```bash
+stats /
+```
+
 ### Google Chrome
 https://docs.fedoraproject.org/en-US/quick-docs/installing-chromium-or-google-chrome-browsers
 
@@ -422,15 +454,15 @@ Keep in mind that screen sharing of Discord and any app on Wayland works 100% if
 
 ### Podman
 
-[Podman](https://podman.io) is built-in in Fedora, so it's not required to install Docker as Podman is a good replacement for the container implementation. However we need to install podman-compose and change SELinux mode to permissive or disabled to avoid permission issues when dealing with container scripts later. Keep in mind that is not a good practice disabling SELinux in any sense, specially for productions systems but for general day-to-day development, it's safe for now.
+[Podman](https://podman.io) is built-in in Fedora, so it's not required to install Docker as Podman is a good replacement for the container implementation. However we need to install podman-compose and change SELinux mode to permissive or disabled to avoid permission issues when dealing with container scripts later. Keep in mind that is not a good practice disabling or set SELinux as "permissive" in any sense, specially for productions systems but for general day-to-day development, it's ok.
 ```bash
-sudo dnf install -y podman-compose \
-sudo setenforce 0 \
+sudo dnf install -y podman-compose
 sestatus
-
 sudo vim /etc/selinux/config
-# SELINUX=disabled
+# SELINUX=permissive
 ```
+
+Podman Desktop (GUI): https://podman-desktop.io
 
 To emulate Docker CLI with Podman:
 https://podman-desktop.io/docs/migrating-from-docker/emulating-docker-cli-with-podman
@@ -454,6 +486,7 @@ Flatpaks can also be installed from https://flathub.org/apps or via GNOME softwa
 
 [**GIMP**](https://flathub.org/apps/org.gimp.GIMP): `flatpak install flathub org.gimp.GIMP` <br>
 [**Telegram Desktop**](https://flathub.org/apps/org.telegram.desktop): `flatpak install flathub org.telegram.desktop` <br>
+[**Github Desktop**](https://flathub.org/apps/io.github.shiftey.Desktop): `flatpak install flathub io.github.shiftey.Desktop` <br>
 
 ### Davinci Resolve
 
