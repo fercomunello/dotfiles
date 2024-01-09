@@ -178,7 +178,7 @@ sudo dnf remove -y evtest
  **Show the notification list:** Mod+V <br>
 
 **Navigation:**
-  **Move to workspace on the left:** Mod +H <br>
+  **Move to workspace on the left:** Mod+H <br>
   **Move to workspace on the right:** Mod+L <br>
 
   **Move window one workspace to the left:** Mod+Shift+H <br>
@@ -187,14 +187,14 @@ sudo dnf remove -y evtest
 
   **Mode window one monitor to the left:** Mod+Ctrl+Shift+H <br>
   **Mode window one monitor to the right:** Mod+Ctrl+Shift+L <br>
-  **Mode window to workspace 1:** Mod+Shift+1 <br>
-  **Mode window to workspace 2:** Mod+Shift+2 <br>
-  **Mode window to workspace 3:** Mod+Shift+3 <br>
-  **Mode window to workspace 4:** Mod+Shift+4 <br>
+  **Move window to workspace 1:** Mod+Shift+1 <br>
+  **Move window to workspace 2:** Mod+Shift+2 <br>
+  **Move window to workspace 3:** Mod+Shift+3 <br>
+  **Move window to workspace 4:** Mod+Shift+4 <br>
   **Switch system controls directly:** Disabled <br>
   **Switch applications:** Alt+Tab <br>
-  **Switch to last workspace:** Mod+0 (keypad) <br>
-  **Switch windows:** Mod+Tab <br>
+  **Switch to last workspace:** Mod+0 <br>
+  **Switch windows of current workspace:** Mod+Tab <br>
 
   * **Note:** It's also possible to move between workspaces by holding 
   Mod key while scroll up and down.
@@ -210,9 +210,8 @@ sudo dnf remove -y evtest
   **View split on right:** Mod+Ctrl+L <br>
   **Maximize window horizontally:** Mod+Ctrl+Shift+K <br>
   **Maximize window vertically:** Mod+Ctrl+Shift+J <br>
-  **Activate the window menu:** Mod+Space <br>
-  **Toggle window on all workspaces or one:** Mod+Shift+Ctrl+A <br>
-  **Hide all normal windows:** Mod+\ <br>
+  **Activate the window menu/overview:** Mod+Space <br>
+  **Toggle window on all workspaces or one:** Mod+Shift+Ctrl+A <br>\
 
 **Launchers:**
   **Home folder:** Mod+E <br>
@@ -511,3 +510,4 @@ An open-source GUI prototyping tool that's available for all platforms.
 cd /tmp && curl -L -O https://pencil.evolus.vn/dl/V3.1.1.ga/Pencil-3.1.1.ga.x86_64.rpm && \
  sudo rpm -i Pencil-3.1.1.ga.x86_64.rpm && cd -
 ```
+
