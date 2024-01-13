@@ -35,7 +35,7 @@ window:
     y: 1
   dimensions:
     columns: 120
-    lines: 26
+    lines: 30
 
 cursor:
   style:
