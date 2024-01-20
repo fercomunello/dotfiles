@@ -4,7 +4,7 @@ set ideajoin
 set ignorecase
 set incsearch
 
-set idearefactormode=keep
+" set idearefactormode=keep
 set ideastatusicon=disabled
 
 let mapleader = " "
