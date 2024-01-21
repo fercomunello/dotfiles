@@ -1,12 +1,17 @@
 # RClone - Setup Google Drive files sync
 
+This is useful for situations that you might need to edit document files locally using your favorite text editor
+such as Vim but without losting all your changes, that's why we are syncing using Google Drive.
+
+In the Google Drive account we can share access with other accounts, like sharing the document with our co-workers.
+It's simple and fast, since we edit the text file locally and every one hour crontab wakes up and run your sync script =)
+
 ## Install and configure rclone
 
 ```bash
 sudo -v ; curl https://rclone.org/install.sh | sudo bash && \
 rclone config
 ```
-
 Google will prompt to authenticate and authorize this CLI service.
 Just follow this procedure:
 ```
@@ -88,25 +93,44 @@ rclone ls gdrive:
 rclone lsd gdrive:
 
 # To copy a local directory to a drive directory called backup
-rclone copy /home/source remote:backup
+rclone copy ~/Documents gdrive:backup
+```
+## Prepare and sync the files
+```bash
+mkdir ~/Shared && \
+rclone bisync gdrive:/Shared /home/fernando/Shared --progress -v \
+--create-empty-src-dirs --resync
 ```
 
-## Mount Google Drive on a local folder
+## Create a job on crontab to sync every hour
 ```bash
-mkdir ~/Cloud && \
-rclone mount --daemon --vfs-cache-mode full gdrive:/ ~/Cloud/
+# Copy the script to:
+sudo cp sync-gdrive.sh /usr/local/bin
+
+# Then replace the home user if your user name, like:
+sudo sed -i 's/youruser/fernando/g' /usr/local/binsync-gdrive.sh
 ```
 
-Now we can navigate and edit files in the ~/Cloud folder and rclone will keep everyting in sync.
+Edit the cron job via crontab -e and add the following line:
 ```bash
-# Just a simple test to check, create the file
-# and see on Google Drive Web or via GNOME if the file was synced properly...
-cd ~/Cloud && tree
-vim ~/Cloud/Shared/hello-world.txt
+0 * * * * /usr/local/bin/sync-gdrive.sh
+```
+
+To list or remove existent cron jobs:
+```bash
+crontab -l
+crontab -r
+```
+
+Restart cron service:
+```bash
+sudo systemctl restart crond.service
+
+# if something goes wrong, we can check
+sudo systemctl -l status crond.service
 ```
 
 It's useful to create aliases for that, like:
 ```bash
-alias cc="cd ~/Cloud && ls -l"
-alias ccs="cd ~/Cloud/Shared && ls -l"
+alias cs="cd ~/Shared && ls -l"
 ```
