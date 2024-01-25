@@ -122,8 +122,10 @@ Settings > Accessibility > Typing > Typing Assist > Repeat Keys
 - Speed default or decrease a little bit.
 - Delay a little greater than "Short".
 
-### Remap CapsLock to ESC
-I usually remap CAPS to ESC to exit Vim insert mode. To do that in a lower levelwith maximum priority, follow this steps:
+### Wayland: Remap CapsLock to ESC
+I usually remap CAPS to ESC to exit Vim insert mode. 
+If you are using Xorg instead of Wayland due to some restrictions, you can use GNOME DConf Editor instead i
+to perform the remapping, but it won't be a lower level remapping like this one described here. 
 
 * Install evtest to get key codes of your keyboard device.
 ```bash
@@ -159,9 +161,22 @@ evdev:input:b0003v1532p0227*
 # replace /dev/input/event3 by the device input event number, it should display
 "E: KEYBOARD_KEY_70039=esc"
 ```
+It is also possible to create multiple hwdb files on /etc/udev/hdwb.d/ to apply the remapping for other keyboards:
+```
+# Switch ESC and CAPSLOCK (ESC=capslock; CAPSLOCK=esc)
+evdev:name:SIGMACHIP USB Keyboard:*
+  KEYBOARD_KEY_70039=esc
+  KEYBOARD_KEY_70029=capslock
+```
+
 * Now it's configured, the evtest utility package can be removed.
 ```bash
 sudo dnf remove -y evtest
+```
+
+* No need to reboot, just run these update commands:
+```bash
+sudo systemd-hwdb update && sudo udevadm trigger
 ```
 
 ### Configure Keyboard Shortcuts
