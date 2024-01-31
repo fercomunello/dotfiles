@@ -50,3 +50,21 @@ Exit the IDE and open via DE panel.
 **Mario Progress Bar:** https://plugins.jetbrains.com/plugin/14708-mario-progress-bar <br>
 **Naruto Progress Bar:** https://plugins.jetbrains.com/plugin/19302-naruto-progress <br>
 
+### Changed Keymaps
+Editor Actions 
+  -> Decrease Font Size: CTRL+Minus
+  -> Increase Font Size: CTRL+=
+  -> Paste: Shift+Insert
+  -> Paste as plain text: CTRL+V
+  -> Reset Font size: CTRL+0
+
+Code -> Folding
+  -> Expand: CTRL+NumPad+
+  -> Collapse: CTRL+NumPad-
+
+Build
+  -> Build Project: ALT+S
+  -> Build Artifacts: CTRL+Shift+9
+
+Window -> Editor Tabs -> Editor Close Actions 
+  -> Close Tab: CTRL+W
