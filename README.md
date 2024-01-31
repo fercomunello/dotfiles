@@ -46,6 +46,11 @@ sed -i 's/^Name=Alacritty/Name=Terminal/g' ~/.local/share/applications/Alacritty
 sed -i 's/^Icon=Alacritty/Icon=org.gnome.Terminal/g' ~/.local/share/applications/Alacritty.desktop; \
 sed -i '2i NoDisplay=true' org.gnome.Terminal.desktop
 ```
+* **Node.js / NPM**: Front-end tooling.
+```sh
+sudo dnf install -y nodejs
+npm install -g @angular/cli
+```
 
 * **[ZSH](https://www.zsh.org):** A shell designed for interactive use, although it is also a powerful scripting language.
 ```sh

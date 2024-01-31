@@ -1,1 +1,0 @@
-/home/fernando/.dotfiles/.vim/colors/hemisu.vim

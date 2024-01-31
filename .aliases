@@ -3,7 +3,7 @@
 # System info
 alias btwiuse='ffr' # bwt i use fedora :P
 # fastfetch > neofetch
-alias ff='fastfetch --disk-show-removable false'
+alias ff='fastfetch'
 alias ffr='ff --logo rhel --logo-color-1 blue --color-keys blue --color-title blue'
 
 # Fedora
