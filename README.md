@@ -88,16 +88,15 @@ Now whenever you change some dotfile the system will recognize the changes on $H
 ln -svf ~/.dotfiles/.profile ~/.profile ; \
 ln -svf ~/.dotfiles/.zshrc ~/.zshrc ; \
 ln -svf ~/.dotfiles/.gitconfig ~/.gitconfig ; \
-mkdir -p ~/.config/alacritty && ln -svf ~/.dotfiles/.config/alacritty/* ~/.config/alacritty/* ; \
+mkdir -p ~/.config/alacritty && ln -svf ~/.dotfiles/.config/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml ; \
 ln -svf ~/.dotfiles/.aliases ~/.aliases ; \
 ln -svf ~/.dotfiles/.oh-my-zsh/custom/shortcuts.zsh ~/.oh-my-zsh/custom/shortcuts.zsh ; \
 ln -svf ~/.dotfiles/.oh-my-zsh/custom/autocomplete.zsh ~/.oh-my-zsh/custom/autocomplete.zsh ; \
 ln -svf ~/.dotfiles/.tmux.conf ~/.tmux.conf ; \
 ln -svf ~/.dotfiles/.vimrc ~/.vimrc ; \
 mkdir -p ~/.vim/UltiSnips && ln -svf ~/.dotfiles/.vim/UltiSnips/all.snippets ~/.vim/UltiSnips/all.snippets ; \
-vim +PluginInstall +qall && mkdir -p ~/.config/pipewire/pipewire-pulse.conf.d ; \
-mkdir -p ~/.local/share/applications ; \
-ln -svf ~/.dotfiles/java/applications/visualvm/visualvm.desktop ~/.local/share/applications/visualvm.desktop ; \
+mkdir -p ~/.vim/colors/hemisu.vim && ln -svf ~/.dotfiles/.vim/colors/hemisu.vim ~/.vim/colors/hemisu.vim && vim +PluginInstall +qall ; \
+sudo mkdir -p /usr/share/applications/visualvm && sudo ln -svf ~/.dotfiles/java/applications/visualvm/visualvm.desktop /usr/share/applications/visualvm.desktop ; \
 ln -svf ~/.dotfiles/.ideavimrc ~/.ideavimrc
 ```
 
