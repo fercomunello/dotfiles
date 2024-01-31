@@ -27,10 +27,7 @@ EOF
 ```
 
 ### Enable RPMFusion repositories
-To enable access to both the free and the nonfree repository use the following command:
-```bash
-sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-```
+https://docs.fedoraproject.org/en-US/quick-docs/rpmfusion-setup/
 
 ### Install media codecs and MPV
 Since last versions of Fedora, some media codecs are not built-in with the distro anymore so we need to install it manually:
@@ -95,7 +92,12 @@ flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flath
 
 Now it's easy, install via GNOME software or run this command:
 ```bash
-flatpak install -y flathub com.spotify.Client
+flatpak install -y --system flathub com.spotify.Client
+```
+
+To list flatpak remotes:
+```bash
+flatpak remotes
 ```
 
 ### Disable Hibernation
@@ -455,14 +457,14 @@ To check whether Chrome refresh rate is synced with the hertz of the monitor, go
 
 ### OBS Studio
 
-The cleanest way is to install it via Flatpak: `flatpak install flathub com.obsproject.Studio`.
+The cleanest way is to install it via Flatpak: `flatpak install flathub com.obsproject.Studio --system`.
 
 ### Discord
 
-If the display server is Xorg (X11) then just install official Discord client via flatpak: `flatpak install flathub com.discordapp.Discord`.
+If the display server is Xorg (X11) then just install official Discord client via flatpak: `flatpak install --user flathub com.discordapp.Discord`.
 
 Otherwise I recommend discord-screen-audio third party app because screen and audio sharing still does not works on the official Discord client due to a old version of Electron.
-`flatpak install flathub de.shorsh.discord-screenaudio`
+`flatpak install --user flathub de.shorsh.discord-screenaudio`
 
 Keep in mind that screen sharing of Discord and any app on Wayland works 100% if you open with Google Chrome or Firefox.
 
@@ -498,9 +500,9 @@ docker run -it docker.io/hello-world
 ### Flatpak apps
 Flatpaks can also be installed from https://flathub.org/apps or via GNOME software.
 
-[**GIMP**](https://flathub.org/apps/org.gimp.GIMP): `flatpak install flathub org.gimp.GIMP` <br>
-[**Telegram Desktop**](https://flathub.org/apps/org.telegram.desktop): `flatpak install flathub org.telegram.desktop` <br>
-[**Github Desktop**](https://flathub.org/apps/io.github.shiftey.Desktop): `flatpak install flathub io.github.shiftey.Desktop` <br>
+[**GIMP**](https://flathub.org/apps/org.gimp.GIMP): `flatpak install --system flathub org.gimp.GIMP` <br>
+[**Telegram Desktop**](https://flathub.org/apps/org.telegram.desktop): `flatpak install --user flathub org.telegram.desktop` <br>
+[**Github Desktop**](https://flathub.org/apps/io.github.shiftey.Desktop): `flatpak install --system flathub io.github.shiftey.Desktop` <br>
 
 ### Davinci Resolve
 
