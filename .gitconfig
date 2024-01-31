@@ -3,6 +3,7 @@
 	email = 66500627+fercomunello@users.noreply.github.com
 [core]
 	editor = vim
+	ignorecase = false
 [init]
 	defaultBranch = main
 [credential "https://github.com"]
@@ -30,3 +31,5 @@
 	initializenew = true
 [push]
 	recurseSubmodules = check
+[credential]
+	helper = store

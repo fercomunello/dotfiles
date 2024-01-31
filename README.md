@@ -16,7 +16,8 @@ The following commands are for [Fedora](https://fedoraproject.org/pt-br/workstat
 
 * **[Git](https://git-scm.com), [Github CLI](https://cli.github.com)**
 ```sh
-sudo dnf install -y git gh
+sudo dnf install -y git gh && \
+git config --global credential.helper store
 ```
 
 * **[Vim](https://www.vim.org):** A text editor built to make creating and changing any kind of text very efficient.
