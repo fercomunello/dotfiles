@@ -312,8 +312,14 @@ Replace the Activies with a menu logo.
 * [Spotify Tray](https://extensions.gnome.org/extension/4472/spotify-tray/):
 Adds a button to the panel that shows info and spotify playback.
 
-* [Window/app switcher on active monitor](https://extensions.gnome.org/extension/5568/monitor-window-switcher-2):
-GNOME Shell extension that puts the window switcher accordingly to the active monitor/workspace (not available for GNOME 45+ yet).
+* [AATWS - Advanced Alt-Tab Window Switcher](https://extensions.gnome.org/extension/4412/advanced-alttab-window-switcher/):
+A highly customizable replacement for Alt/Super+Tab window/app switchers that offers a 'type to search' mode, various filtering and sorting options...
+
+* [Focus Follows Workspace](https://extensions.gnome.org/extension/4688/focus-follows-workspace/)
+Focus the primary monitor after switching workspaces via keyboard
+
+* [https://extensions.gnome.org/extension/1089/go-to-last-workspace/](https://extensions.gnome.org/extension/1089/go-to-last-workspace/):
+Quickly toggle between two workspaces with one key
 
 * [Focus Changer](https://extensions.gnome.org/extension/4627/focus-changer):
 Change focus between windows in all directions.
