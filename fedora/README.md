@@ -200,7 +200,7 @@ sudo systemd-hwdb update && sudo udevadm trigger
 
   **Move window one workspace to the left:** Mod+Shift+H <br>
   **Move window one workspace to the right:** Mod+Shift+L <br>
-  **Mode window to last workspace:** Mod+Shift+0 (keypad) <br>
+  **Mode window to last workspace:** Mod+0 <br>
 
   **Mode window one monitor to the left:** Mod+Ctrl+Shift+H <br>
   **Mode window one monitor to the right:** Mod+Ctrl+Shift+L <br>
@@ -214,7 +214,7 @@ sudo systemd-hwdb update && sudo udevadm trigger
   **Switch windows of current workspace:** Mod+Tab <br>
 
   * **Note:** It's also possible to move between workspaces by holding 
-  Mod key while scroll up and down.
+  Mod key while scroll up and down (only on Wayland).
 
 **Windows:**
   **Close window:** Mod+Q <br>
@@ -252,18 +252,11 @@ sudo systemd-hwdb update && sudo udevadm trigger
   -> dialect <br>
 	
 **Sound and Media:**
-
   **Volume up:** Mod+Alt + = <br>
   **Volume down:** Mod+Alt + - <br>
   **Play/pause:** Mod+Alt+P <br>
   **Volume mute/unmute:** Mod+Alt+9 <br>
   **Microphone mute/unmute:** Mod+Alt+0 <br>
-
-**Screenshots:**
-  **Take a screenshot interactively:** Print <br>
-  **Take a screenshot of a window:** Mod+Print <br>
-  **Take a screenshot:** Shift+Print <br>
-  **Record a screencast interactively:** Shift+Ctrl+Alt+R <br>
 
 **Accessibility:**
   **Turn zoom on or off:** Mod+Shift+Z <br>
@@ -277,7 +270,7 @@ sudo systemd-hwdb update && sudo udevadm trigger
   **Switch to previous input source:** Disabled <br>
   **Restore keyboard shortcuts:** Disabled <br>
 
-### Configure Dconf-editor
+### Configure Dconf-editor (optional)
 A graphical tool for editing the dconf database.
 
 ```bash
@@ -294,33 +287,18 @@ First, install GNOME Extensions extension on the browser and also on the system 
 * [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/):
 Tweak Tool to customize GNOME Shell.
 
-Visibility options that I disabled:
-- Window Picker Caption (the text under window preview in overview).
+Visibility options that I usuallry disable:
 - Workspace Popup (popup that appears on the screen when you switch to other workspace).
 - Dash and Dash separator (the pinned apps in the overview).
-- Activities button (actually replaced with Logo Menu extension).
+- Window Picker Caption (the text under window preview in overview).
 
 Shortcuts:
-- **Alt+Esc (capslock):** Switch to previous workspace<br>
-- **Mod+1..n:** Switch to workspace n<br>
-- **CTRL+Alt+Mod+H:** Move current workspace left<br>
-- **CTRL+Alt+Mod+L:** Move current workspace right<br>
-
 
 * [Vim Alt Tab](https://github.com/koko-ng/vim-altTab):
 Switch between windows on Alt|Mod+Tab using Vim keys: H,J,K,L.
 
-* [Focus Follows Workspace](https://extensions.gnome.org/extension/4688/focus-follows-workspace):
-Focus the primary monitor after switching workspaces via keyboard
-
 * [Space Bar](https://extensions.gnome.org/extension/5090/space-bar):
 Replaces the activities button with an i3-like workspaces bar (not needed for GNOME 45+ anymore).
-
-* [Hide Top Bar](https://extensions.gnome.org/extension/545/hide-top-bar):
-Hides the top bar, except in overview (not available for GNOME 45+ yet).
-
-* [No Titlebar When Maximized](https://extensions.gnome.org/extension/4630/no-titlebar-when-maximized):
-Hides the classic title bar of maximized x.org windows (not needed for GNOME 45+).
 
 * [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/):
 Tweak Tool to customize GNOME Shell.
@@ -339,7 +317,6 @@ GNOME Shell extension that puts the window switcher accordingly to the active mo
 
 * [Focus Changer](https://extensions.gnome.org/extension/4627/focus-changer):
 Change focus between windows in all directions.
-
 
 Shortcuts:
 - **Focus up:** Mod+Alt+K <br>
@@ -365,8 +342,6 @@ Awesome Tiles shortcuts:
 - **Tile Window to Top Left:** Mod+P <br>
 - **Tile Window to Bottom Left:** Mod+, <br>
 - **Tile Window to Bottom Right:** Mod+; <br>
-
-
 
 ### Improve font rendering
 Well, the default fonts on major distros are not so polished like macOS and not so legible as Microsoft Windows fonts. To completely resolve this issue we need to change the fonts at system level.
@@ -415,8 +390,8 @@ Install GNOME Tweaks: `sudo dnf install -y gnome-tweaks`.
 Open GNOME Tweaks and set fonts to:
 - Interface Text: Microsoft Sans Serif Bold 11
 - Document Text: Microsoft Sans Serif Regular 11
-- Monospace Text: JetBrains Mono SemiBold 14
-- Legacy Window Titles: Microsoft Sans Serif Bold 11
+- Monospace Text: Consolas Regular 14
+- Legacy Window Titles: Cantarell Bold 11
 
 Hinting option: Slight
 Antialising option: Subpixel (for LCD screens) or Standard (grayscale), see which fits better on the monitor.
@@ -427,7 +402,6 @@ There is good tools for that.
 ```bash
 sudo dnf install -y htop btop fastfetch nvtop
 ```
-
 * htop: displays usage of CPU, memory, swap and all running processes on the system.
 * btop: same idea as htop but more fancy, more options and can be customized to fit your needs.
 * fastfetch: a alternative to neofetch but faster as it's written in C.
@@ -450,7 +424,6 @@ sudo dnf install -y google-chrome-stable
 
 If you have a multi-monitor setup with different refresh rates i.e. one 144Hz monitor as primary and a 60Hz secondary monitor then you must apply these flags on Chrome to really get 144 fps and not get locked at 60 fps.
 - ignore-gpu-blocklist: Enabled
-- enable-webrtc-pipewire-capturer: Enabled
 - ozone-platform-hint: Auto or Wayland
 
 To check whether Chrome refresh rate is synced with the hertz of the monitor, go to https://www.testufo.com and to check if the GPU is working properly go to chrome://gpu. You can also test hardware acceleration on OBS Studio or Discord by the way.
