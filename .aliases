@@ -131,6 +131,7 @@ alias mciT='mvn clean install -DskipTests'
 
 # Docker
 alias docker='podman'
+#alias docker-compose='podman-compose'
 alias dk='docker'
 alias dkp='docker ps'
 alias dkpa='docker ps -a'
