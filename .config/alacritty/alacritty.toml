@@ -60,7 +60,26 @@ style = "Italic"
 
 [font.normal]
 family = "JetBrains Mono"
-style = "Medium"
+style = "Regular"
+
+#[font]
+#size = 18
+
+#[font.bold]
+#[family = "Consolas"
+#[style = "Bold"
+
+#[[font.bold_italic]
+#[family = "Consolas"
+#[style = "Bold Italic"
+
+#[[font.italic]
+#[family = "Consolas"
+#[style = "Italic"
+
+#[[font.normal]
+#[family = "Consolas"
+#[style = "Medium"
 
 [font.offset]
 x = -2
@@ -68,12 +87,12 @@ y = 0
 
 [window]
 decorations = "None"
-opacity = 0.9
+opacity = 1
 startup_mode = "Windowed"
 
 [window.dimensions]
 columns = 150
-lines = 30
+lines = 50
 
 [window.padding]
 x = 12
