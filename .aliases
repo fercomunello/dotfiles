@@ -21,6 +21,7 @@ alias dnfl='dnf list | grep '
 
 # Unix
 alias v='vim'
+alias v.='vim .'
 alias vi='vim'
 alias c='clear'
 alias rr='rm -Rf'
@@ -41,6 +42,7 @@ alias -g s05='sleep 0.5'
 alias -g H='| head'
 alias -g H2='| head -n 20'
 alias -g G='| grep'
+alias -g CP='| clipcopy'
 
 # Cool tools
 alias ccq='tokei' # count code, quickly

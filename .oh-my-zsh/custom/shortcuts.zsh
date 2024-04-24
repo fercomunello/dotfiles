@@ -1,7 +1,7 @@
 # clears the shell and displays the current dir
 clear-ls-all() {
     clear
-    exa -al
+    ls -lha
 }
 zle -N clear-ls-all
 
