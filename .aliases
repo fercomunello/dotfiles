@@ -1,23 +1,4 @@
 #!/bin/sh
-#
-# System info
-alias btwiuse='ffr' # bwt i use fedora :P
-# fastfetch > neofetch
-alias ff='fastfetch'
-alias ffr='ff --logo rhel --logo-color-1 blue --color-keys blue --color-title blue'
-
-# Fedora
-alias dnfs='dnf search '
-alias sdnf='sudo dnf '
-alias dnfuc='dnf check-update'
-alias dnfu='sudo dnf update'
-alias dnfuy='sudo dnf update -y'
-alias dnfi='sudo dnf install '
-alias dnfiy='sudo dnf install -y '
-alias dnfr='sudo dnf remove '
-alias dnfin='dnf info '
-alias dnfig='dnf info | grep ' 
-alias dnfl='dnf list | grep '
 
 # Unix
 alias v='vim'
@@ -76,17 +57,6 @@ alias p192='ping -c 3 $(hostname -I | awk "{print $1}")' # Try to ping IPV4
 alias myip='curl ifconfig.me; echo'
 alias fdns='sudo resolvectl flush-caches'
 
-# Systemd
-alias sctl='systemctl status'
-alias sctle='sudo systemctl enable'
-alias sctld='sudo systemctl disable'
-alias sctlr='sudo systemctl restart'
-alias sctls='sudo systemctl start'
-alias sctlt='sudo systemctl stop'
-alias sctldr='sudo systemctl daemon-reload'
-alias journal='sudo journalctl -b -n 200 -f'
-alias sctlreboot='systemctl reboot --check-inhibitors=yes'
-
 # Java
 alias j='java'
 alias jv='java -version'
@@ -132,8 +102,6 @@ alias mci='mvn clean install'
 alias mciT='mvn clean install -DskipTests'
 
 # Docker
-alias docker='podman'
-#alias docker-compose='podman-compose'
 alias dk='docker'
 alias dkp='docker ps'
 alias dkpa='docker ps -a'
@@ -162,6 +130,10 @@ alias dkn='docker network'
 alias dkc='docker-compose'
 alias dkcu='docker-compose up'
 alias dkclean='docker ps -q -a -f status=exited | xargs -r docker rm && docker images -q -f dangling=true | xargs -r docker rmi'
+
+# Podman
+# alias docker='podman'
+# alias docker-compose='podman-compose'
 
 # Kubernetes (K8S)
 alias kc='kubectl'
@@ -232,4 +204,3 @@ alias kcii='kubectl-ingress-ip-address'
 alias kcni='kubectl-nginx-ip-address'
 alias kcigip='kubectl-istio-gateway-ip-address'
 alias kcignp='kubectl-istio-gateway-http-nodeport'
-

@@ -46,44 +46,41 @@ TERM = "xterm-256color"
 [font]
 size = 17
 
+#[font.bold]
+#family = "JetBrains Mono"
+#style = "Bold"
+
+#[font.bold_italic]
+#family = "JetBrains Mono"
+#style = "Bold Italic"
+
+#[font.italic]
+#family = "JetBrains Mono"
+#style = "Italic"
+
+#[font.normal]
+#family = "JetBrains Mono"
+#style = "Regular"
+
 [font.bold]
-family = "JetBrains Mono"
+family = "Consolas"
 style = "Bold"
 
 [font.bold_italic]
-family = "JetBrains Mono"
+family = "Consolas"
 style = "Bold Italic"
 
 [font.italic]
-family = "JetBrains Mono"
+family = "Consolas"
 style = "Italic"
 
 [font.normal]
-family = "JetBrains Mono"
+family = "Consolas"
 style = "Regular"
 
-#[font]
-#size = 18
-
-#[font.bold]
-#[family = "Consolas"
-#[style = "Bold"
-
-#[[font.bold_italic]
-#[family = "Consolas"
-#[style = "Bold Italic"
-
-#[[font.italic]
-#[family = "Consolas"
-#[style = "Italic"
-
-#[[font.normal]
-#[family = "Consolas"
-#[style = "Medium"
-
 [font.offset]
-x = -3
-y = -1
+x = -1
+y = 2
 
 [window]
 decorations = "None"

@@ -8,11 +8,17 @@
 <img src="https://i.imgur.com/PgaTfyf.png">
 
 ## Setup
-First of all, install some Linux distro and install the required packages.
+Install some Linux distro and install the required packages.
 
 ### Install essential packages
 The following commands are for [Fedora](https://fedoraproject.org/pt-br/workstation/download/) and
 [RHEL](https://developers.redhat.com/products/rhel) (Red Hat Enterprise Linux), may also work on [Oracle Linux](https://www.oracle.com/linux) and [Rocky Linux](https://rockylinux.org).
+
+### Fix cedilla (ç)
+When using an international keyboard layout, run the following script and then log out:
+```sh
+chmod +x ~/.dotfiles/scripts/fix-cedilla && ~/.dotfiles/scripts/fix-cedilla
+```
 
 * **[Git](https://git-scm.com), [Github CLI](https://cli.github.com)**
 ```sh
@@ -83,6 +89,13 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM
 source ~/.zshrc && source ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 ```
 
+### Install Bash theme on ZSH
+```sh
+wget https://raw.githubusercontent.com/starseekist/bash-zsh-theme/master/bash.zsh-theme -O $ZSH_CUSTOM/themes/bash.zsh-theme
+omz theme use bash
+```
+
+
 ### Clone the repository
 ```sh
 git clone https://github.com/fercomunello/dotfiles.git ~/.dotfiles
@@ -91,6 +104,7 @@ git clone https://github.com/fercomunello/dotfiles.git ~/.dotfiles
 ### Create the symbolic links
 Now whenever you change some dotfile the system will recognize the changes on $HOME folder and subfolders.
 ```sh
+touch ~/.aliases-user ; \
 ln -svf ~/.dotfiles/.profile ~/.profile ; \
 ln -svf ~/.dotfiles/.zshrc ~/.zshrc ; \
 ln -svf ~/.dotfiles/.gitconfig ~/.gitconfig ; \
@@ -101,7 +115,7 @@ ln -svf ~/.dotfiles/.oh-my-zsh/custom/autocomplete.zsh ~/.oh-my-zsh/custom/autoc
 ln -svf ~/.dotfiles/.tmux.conf ~/.tmux.conf ; \
 ln -svf ~/.dotfiles/.vimrc ~/.vimrc ; \
 mkdir -p ~/.vim/UltiSnips && ln -svf ~/.dotfiles/.vim/UltiSnips/all.snippets ~/.vim/UltiSnips/all.snippets ; \
-mkdir -p ~/.vim/colors/hemisu.vim && ln -svf ~/.dotfiles/.vim/colors/hemisu.vim ~/.vim/colors/hemisu.vim && vim +PluginInstall +qall ; \
+mkdir -p ~/.vim/colors && ln -svf ~/.dotfiles/.vim/colors/hemisu.vim ~/.vim/colors/hemisu.vim && vim +PluginInstall +qall ; \
 sudo mkdir -p /usr/share/applications/visualvm && sudo ln -svf ~/.dotfiles/java/applications/visualvm/visualvm.desktop /usr/share/applications/visualvm.desktop ; \
 ln -svf ~/.dotfiles/.ideavimrc ~/.ideavimrc
 ```
@@ -112,17 +126,10 @@ Some dotfiles was created based on [Sebastian Daschner's](https://github.com/sda
 ## Why Fedora?
 * The Fedora project is the upstream, community distro of RHEL. Red Hat is the project’s primary sponsor, but thousands of independent developers also
 contribute to the Fedora project.
-* Fedora comes with [Podman](https://podman.io) engine built-in, a very good implementation of containers, no need to install Docker manually.
 * Fedora comes with a latest kernel version and well tested recent packages. 
 * Fedora is the perfect combination of bleeding edge, stability and ease of use - it's as easy to use as Ubuntu, bleeding edge as Arch while being as free and stable (or close to) as Debian.
 * The community is fantastic, always trying to push the Linux desktop forwards, and with RedHat, it has the money to do this.
 * Technically, I feel Fedora is the most innovative and progressive force for desktop linux users.
+* Fedora comes with [Podman](https://podman.io) engine built-in, a very good implementation of containers, no need to install Docker manually - but it also works well with the traditional Docker Engine.
 * As RHEL, Oracle Linux and CentOS are heavily used on enterprise, you can avoid context switching as will be more familiarized with this kind of environment.
 * If you prefer an alternative vanilla DE other than GNOME you can download a [Fedora Spin](https://fedoraproject.org/spins).
-
---------------------------------
-
-<div align="center">
-  <small>By Fernando Comunello - <strong>Aug/2023</strong></small><br>
-</div>
-
