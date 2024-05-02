@@ -24,7 +24,6 @@ print-unix-timestamp() {
 }
 zle -N print-unix-timestamp
 
-bindkey '^H' clear-tree
 bindkey '^K' clear-ls-all
 bindkey '^T' print-current-date
 bindkey '^[^T' print-unix-timestamp

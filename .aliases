@@ -66,6 +66,8 @@ alias jp='javap -v -l -p -c -s'
 alias sdki='sdk env install'
 
 # Git
+alias g='git'
+alias gc='git clone '
 alias gcm='git commit -m ""'
 alias gg='git graph'
 alias ggs='git show'

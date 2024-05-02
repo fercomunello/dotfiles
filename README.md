@@ -89,13 +89,6 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM
 source ~/.zshrc && source ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 ```
 
-### Install Bash theme on ZSH
-```sh
-wget https://raw.githubusercontent.com/starseekist/bash-zsh-theme/master/bash.zsh-theme -O $ZSH_CUSTOM/themes/bash.zsh-theme
-omz theme use bash
-```
-
-
 ### Clone the repository
 ```sh
 git clone https://github.com/fercomunello/dotfiles.git ~/.dotfiles
