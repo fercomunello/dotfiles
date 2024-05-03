@@ -26,6 +26,18 @@ EndSection
 EOF
 ```
 
+### ZRAM Swap Tunning
+
+Fedora uses ZRAM swap by default, however it has a swappiness of 60 by default which means that Fedora
+will start use swap area when we have ~ 40% of actual RAM usage. As I have 32G of RAM, I can simply set this 
+configuration as 1 to only start using the swap with 99% RAM usage.
+```
+# /etc/sysctl.d/99-sysctl.conf                                                                                                        <<<
+  vm.swappiness = 1
+  vm.page-cluster = 0
+  vm.vfs_cache_pressure = 50
+```
+
 ### Enable RPMFusion repositories
 https://docs.fedoraproject.org/en-US/quick-docs/rpmfusion-setup/
 

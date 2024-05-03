@@ -24,6 +24,7 @@ alias -g H='| head'
 alias -g H2='| head -n 20'
 alias -g G='| grep'
 alias -g CP='| clipcopy'
+alias mem='free -mh'
 
 # Cool tools
 alias ccq='tokei' # count code, quickly

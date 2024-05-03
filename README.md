@@ -89,6 +89,12 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM
 source ~/.zshrc && source ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 ```
 
+## Tmux multiplexer
+```sh
+sudo dnf install tmux xsel -y && \
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
 ### Clone the repository
 ```sh
 git clone https://github.com/fercomunello/dotfiles.git ~/.dotfiles
