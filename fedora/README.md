@@ -26,7 +26,9 @@ EndSection
 EOF
 ```
 
-### ZRAM Swap Tunning
+### Tunning
+
+#### ZRAM Swap Tunning
 
 Fedora uses ZRAM swap by default, however it has a swappiness of 60 by default which means that Fedora
 will start use swap area when we have ~ 40% of actual RAM usage. As I have 32G of RAM, I can simply set this 
@@ -36,6 +38,14 @@ configuration as 1 to only start using the swap with 99% RAM usage.
   vm.swappiness = 1
   vm.page-cluster = 0
   vm.vfs_cache_pressure = 50
+```
+
+#### Disable Linux File Indexing
+Tracker is a file metadata indexer for GNOME, which can be disabled to avoid potential CPU spikes.
+More explanation [here](https://fabio.recife.br/blog/2020/07/26/O-dia-que-o-Tracker-comeu-a-CPU-do-meu-Ubuntu) (pt-BR).
+**Note:** If you are not having problems with /usr/lib/tracker/tracker-store processes, you can ignore this.
+```sh
+systemctl --user mask tracker-store.service tracker-miner-fs.service tracker-miner-rss.service tracker-extract.service tracker-miner-apps.service tracker-writeback.service
 ```
 
 ### Enable RPMFusion repositories
