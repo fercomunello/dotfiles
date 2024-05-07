@@ -14,12 +14,6 @@ Install some Linux distro and install the required packages.
 The following commands are for [Fedora](https://fedoraproject.org/pt-br/workstation/download/) and
 [RHEL](https://developers.redhat.com/products/rhel) (Red Hat Enterprise Linux), may also work on [Oracle Linux](https://www.oracle.com/linux) and [Rocky Linux](https://rockylinux.org).
 
-### Fix cedilla (ç)
-When using an international keyboard layout, run the following script and then log out:
-```sh
-chmod +x ~/.dotfiles/scripts/fix-cedilla && ~/.dotfiles/scripts/fix-cedilla
-```
-
 * **[Git](https://git-scm.com), [Github CLI](https://cli.github.com)**
 ```sh
 sudo dnf install -y git gh && \
