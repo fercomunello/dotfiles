@@ -40,6 +40,33 @@ configuration as 1 to only start using the swap with 99% RAM usage.
   vm.vfs_cache_pressure = 50
 ```
 
+
+#### Disable ZRAM Swap
+Another is option is completely disable ZRAM Swap: 
+```sh
+sudo dnf remove zram-generator zram-generator-defaults -y
+```
+
+Alternatively, you can override the default config file with an empty one:
+```sh
+sudo touch /etc/systemd/zram-generator.conf
+```
+
+Reboot. Confirm that swap-on-zram is not active. zramctl should not list the /dev/zram0 device: `zramctl && sudo systemctl status swap-create@zram0.service`
+
+We can also set up the memory swap on disk:
+```sh
+fallocate -l 6G /swapfile 
+sudo fallocate -l 6G /swapfile 
+df -H
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+sudo vim /etc/fstab
+# fstab
+# /swapfile 	                          swap			  swap	  defaults	  0 0
+```
+
 #### Disable Linux File Indexing
 Tracker is a file metadata indexer for GNOME, which can be disabled to avoid potential CPU spikes.
 More explanation [here](https://fabio.recife.br/blog/2020/07/26/O-dia-que-o-Tracker-comeu-a-CPU-do-meu-Ubuntu) (pt-BR).
@@ -504,6 +531,14 @@ Flatpaks can also be installed from https://flathub.org/apps or via GNOME softwa
 [**GIMP**](https://flathub.org/apps/org.gimp.GIMP): `flatpak install --system flathub org.gimp.GIMP` <br>
 [**Telegram Desktop**](https://flathub.org/apps/org.telegram.desktop): `flatpak install --user flathub org.telegram.desktop` <br>
 [**Github Desktop**](https://flathub.org/apps/io.github.shiftey.Desktop): `flatpak install --system flathub io.github.shiftey.Desktop` <br>
+
+[**Postman**](https://flathub.org/apps/com.getpostman.Postman): `flatpak install --system flathub com.getpostman.Postman` <br>
+
+If for some reason Postman is crashing or not opening correctly, add the certificate files in the correct folder:
+```sh
+cd ~/.var/app/com.getpostman.Postman/config/Postman/proxy
+openssl req -subj '/C=US/CN=Postman Proxy' -new -newkey rsa:2048 -sha256 -days 365 -nodes -x509 -keyout postman-proxy-ca.key -out postman-proxy-ca.crt
+```
 
 ### Davinci Resolve
 
