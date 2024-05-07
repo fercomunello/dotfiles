@@ -67,6 +67,11 @@ sudo vim /etc/fstab
 # /swapfile 	                          swap			  swap	  defaults	  0 0
 ```
 
+To disable swap on disk run this command and then remove the /swapfile entry from /etc/fstab:
+```sh
+sudo swapoff --all
+```
+
 #### Disable Linux File Indexing
 Tracker is a file metadata indexer for GNOME, which can be disabled to avoid potential CPU spikes.
 More explanation [here](https://fabio.recife.br/blog/2020/07/26/O-dia-que-o-Tracker-comeu-a-CPU-do-meu-Ubuntu) (pt-BR).

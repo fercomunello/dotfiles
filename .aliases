@@ -68,8 +68,11 @@ alias sdki='sdk env install'
 
 # Git
 alias g='git'
+alias gs='git status'
 alias gc='git clone '
 alias gcm='git commit -m ""'
+alias ggds='git diff --shortstat'
+alias ggdn='git diff --numstat'
 alias gg='git graph'
 alias ggs='git show'
 alias ggt='git tag'
