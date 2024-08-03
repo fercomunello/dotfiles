@@ -1,7 +1,13 @@
 
 ## Keyboard Layout
 
+**Portuguese Brazil ABNT2 with intl. keyboard**:
+
+Set-up: Set F12 to change keyboard language, install [quick-lang-switch extension](https://extensions.gnome.org/extension/4559/quick-lang-switch) for GNOME to remove the animation and swich the language more quickly and configure macros for pipe (|) and \ (back-slash).
+
+
 **English (intl. with AltGr dead keys)**:
+An alternative option for intl. keyboards is using AltGr dead keys.
 ```
 ALTGR + A = áááááááááá
 ALTGR + O = óóóóóóóóóó
@@ -31,7 +37,7 @@ ALTGR + Shift + ` + a = ããããã
 Shift + \ = |||||||||||||||
 ```
 
-## Fix cedilla (ç)
+#### Fix cedilla (ç)
 When using an international keyboard layout, run the following script and then log out:
 ```sh
 chmod +x ~/.dotfiles/keyboard/fix-cedilla && ~/.dotfiles/keyboard/fix-cedilla
