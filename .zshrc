@@ -106,7 +106,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
 source ~/.aliases
-source ~/.aliases-system
 
 # Custom user aliases
 source ~/.aliases-user
