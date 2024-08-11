@@ -460,7 +460,7 @@ Antialising option: Subpixel (for LCD screens) or Standard (grayscale), see whic
 
 There is good tools for that.
 ```bash
-sudo dnf install -y htop btop fastfetch nvtop
+sudo dnf install -y htop lm_sensors btop fastfetch nvtop
 ```
 * htop: displays usage of CPU, memory, swap and all running processes on the system.
 * btop: same idea as htop but more fancy, more options and can be customized to fit your needs.
