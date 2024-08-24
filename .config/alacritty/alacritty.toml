@@ -44,7 +44,7 @@ shape = "Block"
 TERM = "xterm-256color"
 
 [font]
-size = 17
+size = 16
 
 [font.bold]
 family = "JetBrains Mono"
@@ -85,7 +85,7 @@ y = -1
 
 [window]
 decorations = "None"
-opacity = 1
+opacity = 0.91
 startup_mode = "Windowed"
 
 [window.dimensions]
