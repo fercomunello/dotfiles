@@ -43,9 +43,11 @@ set mouse=r
 autocmd TextYankPost * if (v:event.operator == 'y' || v:event.operator == 'd') | silent! execute 'call system("wl-copy", @")' | endif
 "nnoremap p :let @"=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<cr>p
 
+" save file
 nnoremap <C-s> :w<CR>
 inoremap <C-s> <Esc>:w<CR>a
 
+" quit vim
 nnoremap <C-q> :q!<CR>
 inoremap <C-q> <Esc>:q!<CR>
 
@@ -63,6 +65,16 @@ inoremap <C-k> <Esc>:m -2<CR>gi
 vnoremap <C-j> :m '>+1<CR>gvgv
 vnoremap <C-k> :m '<-2<CR>gvgv
 
+" toggle file explorer
+inoremap <c-b> <Esc>:Lex<cr>:vertical resize 30<cr>
+nnoremap <c-b> <Esc>:Lex<cr>:vertical resize 30<cr>
+
+" tab workflow
+nnoremap tn  :tabnew<Space>
+nnoremap tk  :tabnext<CR>
+nnoremap tj  :tabprev<CR>
+nnoremap tf  :tabfirst<CR>
+nnoremap tl  :tablast<CR>
 
 set background=dark
 colorscheme hemisu
