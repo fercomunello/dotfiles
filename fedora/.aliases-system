@@ -29,3 +29,7 @@ alias sctlt='sudo systemctl stop'
 alias sctldr='sudo systemctl daemon-reload'
 alias journal='sudo journalctl -b -n 200 -f'
 alias sctlreboot='systemctl reboot --check-inhibitors=yes'
+
+# Auto-kill Tracker Miner Processses (GNOME Files Indexing)
+alias akt='while true ; do sleep 5s; killall tracker-miner-fs-3 ; killall tracker-extract-3 ; done &'
+
