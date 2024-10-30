@@ -49,6 +49,8 @@ sed -i '2i NoDisplay=true' org.gnome.Terminal.desktop
 * **Node.js / NPM**: Front-end tooling.
 ```sh
 sudo dnf install -y nodejs
+npm install --save-dev webpack
+npm install --save-dev webpack-cli
 npm install -g @angular/cli
 ```
 

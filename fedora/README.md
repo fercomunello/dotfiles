@@ -77,6 +77,7 @@ Tracker is a file metadata indexer for GNOME, which can be disabled to avoid pot
 More explanation [here](https://fabio.recife.br/blog/2020/07/26/O-dia-que-o-Tracker-comeu-a-CPU-do-meu-Ubuntu) (pt-BR).
 **Note:** If you are not having problems with /usr/lib/tracker/tracker-store processes, you can ignore this.
 ```sh
+sudo systemctl --global mask tracker-miner-fs-3.service && sudo systemctl --global mask tracker-xdg-portal-3.service
 systemctl --user mask tracker-store.service tracker-miner-fs.service tracker-miner-rss.service tracker-extract.service tracker-miner-apps.service tracker-writeback.service
 ```
 

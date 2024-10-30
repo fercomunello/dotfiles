@@ -31,5 +31,5 @@ alias journal='sudo journalctl -b -n 200 -f'
 alias sctlreboot='systemctl reboot --check-inhibitors=yes'
 
 # Auto-kill Tracker Miner Processses (GNOME Files Indexing)
-alias akt='while true ; do sleep 5s; killall tracker-miner-fs-3 ; killall tracker-extract-3 ; done &'
+alias akt='while true ; do sleep 5s;  systemctl --user mask tracker-store.service tracker-miner-fs.service tracker-miner-rss.service tracker-extract.service tracker-miner-apps.service tracker-writeback.service > /dev/null  2>&1 ; tracker3 reset -s -r > /dev/null 2>&1 ; rm -rf ~/.cache/tracker ; done &'
 
