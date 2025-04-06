@@ -48,7 +48,7 @@ size = 16
 
 [font.bold]
 family = "JetBrains Mono"
-style = "Bold"
+style = "SemiBold"
 
 [font.bold_italic]
 family = "JetBrains Mono"
@@ -85,7 +85,7 @@ y = -1
 
 [window]
 decorations = "None"
-opacity = 0.91
+opacity = 1
 startup_mode = "Windowed"
 
 [window.dimensions]
