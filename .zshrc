@@ -15,7 +15,6 @@ ZSH_THEME="gentoo"
 # a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -110,7 +109,7 @@ source ~/.aliases
 # Custom user aliases
 source ~/.aliases-user
 
-# System Aliases
+# Fedora aliases
 source ~/.aliases-system
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!

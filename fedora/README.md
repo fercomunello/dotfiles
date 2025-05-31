@@ -487,7 +487,15 @@ If you have a multi-monitor setup with different refresh rates i.e. one 144Hz mo
 - ignore-gpu-blocklist: Enabled
 - ozone-platform-hint: Auto or Wayland
 
-To check whether Chrome refresh rate is synced with the hertz of the monitor, go to https://www.testufo.com and to check if the GPU is working properly go to chrome://gpu. You can also test hardware acceleration on OBS Studio or Discord by the way.
+To check whether Chrome refresh rate is synced with the hertz of the monitor, go to https://www.testufo.com and to check if the GPU is working properly go to chrome://gpu. You can also test hardware acceleration on OBS Studio or Discord.
+
+Do not forget to enable hardware video acceleration on Chrome, create a GNMOME launcher with the following command:
+```bash
+google-chrome --use-gl=angle --use-angle=vulkan --enable-accelerated-video-decode --enable-features=Vulkan,VulkanFromANGLE,DefaultANGLEVulkan,VaapiIgnoreDriverChecks,Vaap
+iVideoDecoder,PlatformHEVCDecoderSupport,UseMultiPlaneFormatForHardwareVideo
+```
+
+Open chrome://gpu to verify whether video acceleration was enabled correctly.
 
 ### OBS Studio
 
