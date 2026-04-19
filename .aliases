@@ -5,7 +5,6 @@ alias v='vim'
 alias v.='vim .'
 alias vi='vim'
 alias c='clear'
-alias rr='rm -Rf'
 alias chmx='chmod +x' # give exec permission to sh files
 alias k9='kill -9' # send SIGKILL signal to the process pid
 alias rp='realpath' # show the absolute path of some file

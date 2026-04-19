@@ -1,45 +1,43 @@
 <scheme name="Darcula Contrast Custom" version="142" parent_scheme="Darcula">
   <metaInfo>
-    <property name="created">2024-01-03T16:05:23</property>
     <property name="ide">idea</property>
-    <property name="ideVersion">2023.2.5.0.0</property>
-    <property name="modified">2024-01-03T16:05:26</property>
+    <property name="ideVersion">2025.3.2.0.0</property>
     <property name="originalScheme">Darcula Contrast Custom</property>
   </metaInfo>
   <colors>
     <option name="ADDED_LINES_COLOR" value="549159" />
-    <option name="ANNOTATIONS_COLOR" value="8d9199" />
-    <option name="ANNOTATIONS_LAST_COMMIT_COLOR" value="ced0d6" />
-    <option name="CARET_ROW_COLOR" value="2b2d30" />
-    <option name="CONSOLE_BACKGROUND_KEY" value="1e1f22" />
-    <option name="DELETED_LINES_COLOR" value="868a91" />
-    <option name="DIFF_SEPARATORS_BACKGROUND" value="2b2d30" />
-    <option name="DOCUMENTATION_COLOR" value="2b2d30" />
+    <option name="ANNOTATIONS_COLOR" value="8D9199" />
+    <option name="ANNOTATIONS_LAST_COMMIT_COLOR" value="CED0D6" />
+    <option name="CARET_ROW_COLOR" value="2B2D30" />
+    <option name="CONSOLE_BACKGROUND_KEY" value="1E1F22" />
+    <option name="DELETED_LINES_COLOR" value="868A91" />
+    <option name="DIFF_SEPARATORS_BACKGROUND" value="2B2D30" />
+    <option name="DOCUMENTATION_COLOR" value="2B2D30" />
     <option name="ERROR_HINT" value="402929" />
     <option name="IGNORED_ADDED_LINES_BORDER_COLOR" value="549159" />
-    <option name="IGNORED_DELETED_LINES_BORDER_COLOR" value="868a91" />
-    <option name="IGNORED_MODIFIED_LINES_BORDER_COLOR" value="375fad" />
+    <option name="IGNORED_DELETED_LINES_BORDER_COLOR" value="868A91" />
+    <option name="IGNORED_MODIFIED_LINES_BORDER_COLOR" value="375FAD" />
     <option name="INDENT_GUIDE" value="313438" />
-    <option name="INFORMATION_HINT" value="2b2d30" />
-    <option name="LINE_NUMBERS_COLOR" value="4e5157" />
-    <option name="LINE_NUMBER_ON_CARET_ROW_COLOR" value="9da0a8" />
-    <option name="LOOKUP_COLOR" value="2b2d30" />
-    <option name="METHOD_SEPARATORS_COLOR" value="43454a" />
-    <option name="MODIFIED_LINES_COLOR" value="375fad" />
-    <option name="NOTIFICATION_BACKGROUND" value="25324d" />
-    <option name="PROMOTION_PANE" value="25324d" />
-    <option name="QUESTION_HINT" value="25324d" />
-    <option name="RECENT_LOCATIONS_SELECTION" value="2b2d30" />
-    <option name="RIGHT_MARGIN_COLOR" value="393b40" />
-    <option name="SELECTED_INDENT_GUIDE" value="6f737a" />
-    <option name="SELECTION_BACKGROUND" value="364067" />
-    <option name="VCS_ANNOTATIONS_COLOR_1" value="2f5194" />
-    <option name="VCS_ANNOTATIONS_COLOR_2" value="2d416b" />
+    <option name="INFORMATION_HINT" value="2B2D30" />
+    <option name="LINE_NUMBERS_COLOR" value="4E5157" />
+    <option name="LINE_NUMBER_ON_CARET_ROW_COLOR" value="9DA0A8" />
+    <option name="LOOKUP_COLOR" value="2B2D30" />
+    <option name="METHOD_SEPARATORS_COLOR" value="43454A" />
+    <option name="MODIFIED_LINES_COLOR" value="375FAD" />
+    <option name="NOTIFICATION_BACKGROUND" value="25324D" />
+    <option name="PROMOTION_PANE" value="25324D" />
+    <option name="QUESTION_HINT" value="25324D" />
+    <option name="RECENT_LOCATIONS_SELECTION" value="2B2D30" />
+    <option name="RIGHT_MARGIN_COLOR" value="393B40" />
+    <option name="SELECTED_INDENT_GUIDE" value="6F737A" />
+    <option name="SELECTION_BACKGROUND" value="313235" />
+    <option name="VCS_ANNOTATIONS_COLOR_1" value="2F5194" />
+    <option name="VCS_ANNOTATIONS_COLOR_2" value="2D416B" />
     <option name="VCS_ANNOTATIONS_COLOR_3" value="283754" />
-    <option name="VCS_ANNOTATIONS_COLOR_4" value="242d42" />
-    <option name="VCS_ANNOTATIONS_COLOR_5" value="22252e" />
-    <option name="VISUAL_INDENT_GUIDE" value="2b2d30" />
-    <option name="WHITESPACES_MODIFIED_LINES_COLOR" value="52433d" />
+    <option name="VCS_ANNOTATIONS_COLOR_4" value="242D42" />
+    <option name="VCS_ANNOTATIONS_COLOR_5" value="22252E" />
+    <option name="VISUAL_INDENT_GUIDE" value="2B2D30" />
+    <option name="WHITESPACES_MODIFIED_LINES_COLOR" value="52433D" />
   </colors>
   <attributes>
     <option name="ANNOTATION_NAME_ATTRIBUTES" baseAttributes="DEFAULT_METADATA" />
@@ -81,6 +79,12 @@
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
+    <option name="DEFAULT_DOC_COMMENT">
+      <value>
+        <option name="FOREGROUND" value="86df7d" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
     <option name="DEFAULT_FUNCTION_DECLARATION" baseAttributes="DEFAULT_IDENTIFIER" />
     <option name="DEFAULT_IDENTIFIER">
       <value>
@@ -94,7 +98,8 @@
     </option>
     <option name="DEFAULT_KEYWORD">
       <value>
-        <option name="FOREGROUND" value="ecba4d" />
+        <option name="FOREGROUND" value="eab563" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="DEFAULT_METADATA">
@@ -133,7 +138,6 @@
     <option name="HTML_ATTRIBUTE_VALUE">
       <value>
         <option name="FOREGROUND" value="9eff89" />
-        <option name="EFFECT_COLOR" value="2b2d30" />
       </value>
     </option>
     <option name="HTML_CUSTOM_TAG_NAME" baseAttributes="HTML_TAG_NAME" />
@@ -153,6 +157,9 @@
         <option name="ERROR_STRIPE_COLOR" value="36b13" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
+    </option>
+    <option name="INJECTED_LANGUAGE_FRAGMENT">
+      <value />
     </option>
     <option name="JSP_DIRECTIVE_NAME">
       <value>

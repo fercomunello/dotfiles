@@ -3,5 +3,7 @@ Name=VisualVM
 Comment=All-in-One Java Troubleshooting Tool
 Type=Application
 Categories=Development;Java
-Exec=/opt/visualvm/bin/visualvm -J-Djdk.gtk.version=2
+Exec=/opt/visualvm/bin/visualvm
+#Exec=/opt/visualvm/bin/visualvm --nosplash -J-Djdk.gtk.version=2
+#Exec=/opt/visualvm/bin/visualvm --nosplash --laf Metal --fontsize 13
 Icon=/opt/visualvm/icon.svg

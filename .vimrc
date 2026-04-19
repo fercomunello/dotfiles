@@ -52,6 +52,9 @@ nnoremap <C-q> :q!<CR>
 inoremap <C-q> <Esc>:q!<CR>
 
 let mapleader = " "
+
+nnoremap <leader>pv :Ex<CR>
+
 nmap <leader>d <C-d>
 nmap <leader>u <C-u>
 vmap <leader>d <C-d>
